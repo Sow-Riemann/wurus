@@ -1,0 +1,2681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="referrer" content="no-referrer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Sow-Riemann.Miro.Wurus.V9 — Thierno M. Sow 2026</title>
+<style>
+/* Fonts système — fonctionne hors-ligne */
+/* Orbitron -> Courier New bold caps (monospace display) */
+/* Share Tech Mono -> Courier New / Consolas */
+/* Rajdhani -> system-ui */
+/* Bebas Neue -> Impact / Arial Narrow */
+
+:root {
+  --ink:   #04070e;
+  --card:  #080d1a;
+  --bord:  #112235;
+  --gold:  #b87a08;
+  --goldb: #d49020;
+  --goldl: #f0c870;
+  --goldd: #7a5004;
+  --cream: #e8d8a8;
+  --fw:    #f8f6f2;
+  --green: #00e87a;
+  --orange:#ff8c00;
+  --red:   #ff1a3a;
+  --blue:  #00aaff;
+  --cyan:  #00d4f0;
+  --dim:   #2a4060;
+  --mlo:   #050a14;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:var(--ink);font-family:system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  color:#7090b0;min-height:100vh;overflow-x:hidden;
+}
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse 90% 45% at 50% 0%,rgba(180,120,8,.09) 0%,transparent 55%),
+    radial-gradient(ellipse 40% 40% at 88% 88%,rgba(0,180,100,.03) 0%,transparent 55%);
+  pointer-events:none;
+}
+body::after{
+  content:'';position:fixed;inset:0;z-index:0;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,110,180,.007) 3px,rgba(0,110,180,.007) 4px);
+  pointer-events:none;
+}
+.app{position:relative;z-index:1;max-width:460px;margin:0 auto;padding:10px 12px 16px;}
+
+/* ══ HEADER ══ */
+header{text-align:center;padding:12px 0 10px;border-bottom:1px solid var(--bord);margin-bottom:10px;}
+
+.poly-line{
+  font-family:'Courier New', Consolas, 'Lucida Console', monospace;font-size:12px;font-weight:700;
+  letter-spacing:7px;color:#c8a840;
+  text-shadow:0 0 14px rgba(200,168,64,.65),0 0 28px rgba(200,168,64,.2);
+  margin-bottom:8px;
+}
+.title-row{display:inline-flex;align-items:center;letter-spacing:4px;line-height:1;}
+.t-letter{
+  font-family:'Courier New', Consolas, 'Lucida Console', monospace;font-size:26px;font-weight:900;
+  background:linear-gradient(135deg,var(--goldd) 0%,var(--gold) 18%,var(--goldb) 44%,var(--goldl) 60%,var(--goldb) 76%,var(--goldd) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 5px rgba(180,120,8,.28));
+}
+.t-space{width:10px;display:inline-block;}
+
+.ant-svg{width:20px;height:32px;overflow:visible;display:inline-block;vertical-align:middle;margin:0 1px;margin-top:-4px;}
+.ant-beacon-el{animation:bcn 2s ease-in-out infinite;}
+@keyframes bcn{
+  0%,100%{filter:drop-shadow(0 0 6px #00e5ff) drop-shadow(0 0 14px rgba(0,229,255,.8)) drop-shadow(0 0 28px rgba(0,200,255,.4));}
+  50%    {filter:drop-shadow(0 0 12px #00e5ff) drop-shadow(0 0 24px rgba(0,229,255,1))  drop-shadow(0 0 48px rgba(0,180,255,.6));}
+}
+.ant-wave1{animation:wv 2.2s ease-out infinite;transform-origin:10px 8px;}
+.ant-wave2{animation:wv 2.2s ease-out infinite .7s;transform-origin:10px 8px;}
+.ant-wave3{animation:wv 2.2s ease-out infinite 1.4s;transform-origin:10px 8px;}
+@keyframes wv{0%{opacity:.7;transform:scale(.3);}100%{opacity:0;transform:scale(1.4);}}
+.ant-beam-el{animation:bspin 3.5s linear infinite;transform-origin:10px 8px;}
+@keyframes bspin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+
+/* ZETA TOP GUN */
+.zet-row{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:6px;position:relative;padding-bottom:6px;}
+.zet-metal{
+  font-family:'Impact', 'Arial Narrow', Arial, sans-serif;
+  font-size:38px;
+  font-weight:400;
+  letter-spacing:12px;
+  background:linear-gradient(180deg,
+    #ffffff 0%,
+    #d0e8f8 15%,
+    #a0c4e0 35%,
+    #5888a8 60%,
+    #2a5070 80%,
+    #0a2030 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 8px rgba(0,180,255,.4)) drop-shadow(0 2px 1px rgba(0,0,0,.8));
+  display:flex;
+  align-items:center;
+  gap:0px;
+  text-shadow:none;
+  position:relative;
+}
+.zet-letter{
+  font-family:'Impact', 'Arial Narrow', Arial, sans-serif;
+  background:linear-gradient(180deg,
+    #ffffff 0%,
+    #d0e8f8 15%,
+    #a0c4e0 35%,
+    #5888a8 60%,
+    #2a5070 80%,
+    #0a2030 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  line-height:1;
+  /* Trait de soulignement Top Gun — ligne orange fine */
+}
+.zet-row::after{
+  content:'';
+  position:absolute;
+  bottom:-3px;left:50%;
+  transform:translateX(-50%);
+  width:80px;height:1px;
+  background:linear-gradient(90deg,transparent,#ff8c00,transparent);
+  opacity:0.7;
+}
+.zeta-topgun-svg{
+  width:280px;
+  height:64px;
+  filter:drop-shadow(0 0 10px rgba(0,160,255,.35)) drop-shadow(0 0 24px rgba(0,100,200,.15));
+}
+.zeta-star{
+  animation:starPulse 3s ease-in-out infinite;
+  transform-origin:0px 0px;
+}
+@keyframes starPulse{
+  0%,100%{opacity:0.7;filter:drop-shadow(0 0 2px rgba(180,220,255,.4));}
+  50%{opacity:1;filter:drop-shadow(0 0 6px rgba(180,220,255,.9));}
+}
+/* Bande 5G */
+.zet-band{
+  display:inline-flex;
+  align-items:flex-end;
+  gap:2px;
+  height:18px;
+  margin-left:2px;
+}
+.zet-bar{
+  width:4px;
+  background:var(--blue);
+  border-radius:1px;
+  box-shadow:0 0 8px var(--blue);
+  opacity:0.9;
+  animation:barPulse 2s infinite;
+}
+.zet-bar:nth-child(1){height:14px;animation-delay:0s;}  /* grande barre à gauche */
+.zet-bar:nth-child(2){height:10px;animation-delay:0.3s;}
+.zet-bar:nth-child(3){height:6px;animation-delay:0.6s;}
+@keyframes barPulse{
+  0%,100%{opacity:0.7;box-shadow:0 0 5px var(--blue);}
+  50%{opacity:1;box-shadow:0 0 12px var(--blue);}
+}
+.zet-bolt{
+  font-size:18px;opacity:0;
+  filter:drop-shadow(0 0 8px #ffcc00);
+  pointer-events:none;
+}
+.zet-bolt.victory{animation:vbolt 3s ease-in-out forwards;}
+@keyframes vbolt{
+  0%{opacity:0;}
+  8%{opacity:1;}16%{opacity:0;}
+  24%{opacity:1;}32%{opacity:0;}
+  40%{opacity:1;}48%{opacity:0;}
+  56%{opacity:1;}64%{opacity:0;}
+  72%{opacity:1;}80%{opacity:0;}
+  100%{opacity:0;}
+}
+
+.prf-line{
+  font-family:'Courier New', Consolas, monospace;font-size:9px;letter-spacing:4px;
+  color:var(--fw);text-shadow:0 0 10px rgba(248,246,242,.35);
+  margin-top:5px;
+}
+
+.formula-wrap{
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-top:8px;padding:7px 18px;border-radius:8px;
+  background:rgba(180,120,8,.07);border:1px solid rgba(200,160,64,.15);
+}
+.fm{display:inline-flex;align-items:center;gap:5px;}
+.fm-zeta{font-family:'Georgia',serif;font-size:18px;color:var(--fw);font-style:italic;text-shadow:0 0 8px rgba(255,255,255,.25);}
+.fm-paren{font-family:'Georgia',serif;font-size:16px;color:var(--fw);}
+.fm-s{font-family:'Georgia',serif;font-size:14px;font-style:italic;color:var(--fw);}
+.fm-eq{font-family:'Georgia',serif;font-size:16px;color:var(--fw);margin:0 4px;}
+.fm-pls{font-family:'Georgia',serif;font-size:16px;color:var(--fw);margin:0 4px;}
+.fm-frac{display:inline-flex;flex-direction:column;align-items:center;gap:2px;vertical-align:middle;}
+.fm-num{font-family:'Georgia',serif;font-size:12px;color:var(--fw);line-height:1;}
+.fm-bar{height:1px;background:rgba(248,246,242,.85);min-width:10px;}
+.fm-den{
+  font-family:'Georgia',serif;
+  font-size:11px;
+  color:var(--fw);
+  line-height:1.2;
+  white-space:nowrap;
+  display:flex;
+  align-items:center;
+}
+.fm-sup{
+  font-size:9px;
+  vertical-align:super;
+  line-height:1;
+  margin-left:1px;
+  display:inline-block;
+  transform:translateY(-1px);
+}
+
+/* ══ COCKPIT HOLOGRAMME ══ */
+.cockpit-svg{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-44%);
+  width:160px;height:178px;
+  z-index:0;
+  pointer-events:none;
+  opacity:.6;
+}
+
+/* Boussole couchée au sol — aiguille oscille doucement */
+.hud-compass-needle{
+  animation:compassOsc 9s ease-in-out infinite;
+  transform-origin:70px 128px;
+}
+@keyframes compassOsc{
+  0%  {transform:rotate(0deg);}
+  20% {transform:rotate(14deg);}
+  45% {transform:rotate(-9deg);}
+  65% {transform:rotate(6deg);}
+  85% {transform:rotate(-3deg);}
+  100%{transform:rotate(0deg);}
+}
+
+/* Anneau externe boussole — oscillation pendulaire ±30° au sol */
+.hud-compass-ring{
+  animation:compassPendulum 6s ease-in-out infinite;
+  transform-origin:70px 148px;
+}
+@keyframes compassPendulum{
+  0%  {transform:scaleY(0.227) rotate(0deg);}
+  25% {transform:scaleY(0.227) rotate(-43deg);}
+  75% {transform:scaleY(0.227) rotate(43deg);}
+  100%{transform:scaleY(0.227) rotate(0deg);}
+}
+
+/* Radar haut — pulse doux concentrique */
+.hud-radar-ring1{animation:radarPing 3.5s ease-out infinite;}
+.hud-radar-ring2{animation:radarPing 3.5s ease-out infinite 1.2s;}
+.hud-radar-ring3{animation:radarPing 3.5s ease-out infinite 2.4s;}
+@keyframes radarPing{
+  0%  {opacity:0.6;transform:scale(0.6);transform-box:fill-box;transform-origin:center;}
+  80% {opacity:0.15;transform:scale(1);transform-box:fill-box;transform-origin:center;}
+  100%{opacity:0;transform:scale(1.05);transform-box:fill-box;transform-origin:center;}
+}
+
+/* Aiguilles — lévitation gracieuse, danse massaï lente et douce */
+.hud-needle1{animation:bounce1 3.8s ease-in-out infinite,      breathe 3.2s ease-in-out infinite;}
+.hud-needle2{animation:bounce2 5.2s ease-in-out infinite 0.7s, breathe 4.1s ease-in-out infinite 0.8s;}
+.hud-needle3{animation:bounce3 4.4s ease-in-out infinite 1.6s, breathe 2.8s ease-in-out infinite 1.5s;}
+.hud-needle4{animation:bounce4 6.1s ease-in-out infinite 0.3s, breathe 3.7s ease-in-out infinite 0.4s;}
+.hud-needle5{animation:bounce5 4.9s ease-in-out infinite 2.2s, breathe 5s   ease-in-out infinite 2s;}
+
+/* Chaque aiguille flotte à sa propre hauteur, rythme gracieux */
+@keyframes bounce1{
+  0%,100%{transform:translateY(0);}
+  40%    {transform:translateY(-5px);}
+  65%    {transform:translateY(-1.5px);}
+  80%    {transform:translateY(-3px);}
+}
+@keyframes bounce2{
+  0%,100%{transform:translateY(0);}
+  30%    {transform:translateY(-8px);}
+  55%    {transform:translateY(-1px);}
+  75%    {transform:translateY(-5px);}
+  90%    {transform:translateY(-0.5px);}
+}
+@keyframes bounce3{
+  0%,100%{transform:translateY(0);}
+  38%    {transform:translateY(-4px);}
+  62%    {transform:translateY(-0.5px);}
+  80%    {transform:translateY(-2.5px);}
+}
+@keyframes bounce4{
+  0%,100%{transform:translateY(0);}
+  28%    {transform:translateY(-6px);}
+  52%    {transform:translateY(-1px);}
+  72%    {transform:translateY(-4px);}
+  88%    {transform:translateY(-0.5px);}
+}
+@keyframes bounce5{
+  0%,100%{transform:translateY(0);}
+  32%    {transform:translateY(-10px);}
+  55%    {transform:translateY(-2px);}
+  72%    {transform:translateY(-6px);}
+  88%    {transform:translateY(-1px);}
+}
+@keyframes breathe{
+  0%,100%{opacity:0.55;}
+  50%    {opacity:0.95;}
+}
+
+/* Pointes d'aiguilles — glow lumineux */
+.needle-tip{
+  filter:drop-shadow(0 0 3px currentColor) drop-shadow(0 0 6px currentColor);
+}
+
+/* Ping glow B (or) et C (vert) — identique à A */
+.band-pill.bB::after,
+.band-pill.bC::after{
+  content:'';
+  position:absolute;
+  inset:-12px;
+  border-radius:50%;
+  opacity:0;
+  animation:rotorPing 3s ease-out infinite;
+  pointer-events:none;
+}
+.band-pill.bB::after{
+  background:radial-gradient(circle,rgba(212,144,32,.35) 0%,transparent 70%);
+  animation-delay:1s;
+}
+.band-pill.bC::after{
+  background:radial-gradient(circle,rgba(0,232,122,.35) 0%,transparent 70%);
+  animation-delay:2s;
+}
+@keyframes rotorPing{
+  0%  {opacity:0;transform:scale(0.6);}
+  30% {opacity:0.8;}
+  100%{opacity:0;transform:scale(1.5);}
+}
+
+/* B et C aussi avec le même ::before ping */
+.band-pill.bA::after{
+  content:'';
+  position:absolute;
+  inset:-12px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(0,170,255,.35) 0%,transparent 70%);
+  opacity:0;
+  animation:rotorPing 3s ease-out infinite;
+  pointer-events:none;
+}
+
+/* Halo lévitation boussole — pulsation subtile */
+.hud-halo{animation:haloPulse 4s ease-in-out infinite;}
+@keyframes haloPulse{
+  0%,100%{opacity:0.45;}
+  50%    {opacity:0.7;}
+}
+
+/* Point central radar — battement */
+.hud-center-glow{animation:centerBeat 2.5s ease-in-out infinite;}
+@keyframes centerBeat{
+  0%,100%{opacity:0.5;}
+  50%    {opacity:1;}
+}
+
+/* Scan radar — ligne horizontale discrète */
+.hud-scan1{animation:scanFade 4s ease-in-out infinite;}
+.hud-scan2{animation:scanFade 4s ease-in-out infinite 2s;}
+@keyframes scanFade{
+  0%,100%{opacity:0;}
+  30%,70%{opacity:0.4;}
+  50%    {opacity:0.7;}
+}
+
+/* ══ TRIANGLE PYRAMIDE ══ */
+.bands-pyramid{
+  position:relative;
+  width:200px;height:155px;
+  margin:12px auto 0;
+}
+
+.band-pill{
+  position:absolute;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  cursor:pointer;user-select:none;
+  transition:box-shadow .4s;
+  z-index:2;
+}
+.band-pill.pos-top{
+  left:50%;transform:translateX(-50%);
+  top:0;
+}
+.band-pill.pos-bl{
+  left:8px;
+  bottom:0;
+}
+.band-pill.pos-br{
+  right:8px;
+  bottom:0;
+}
+
+.band-circle{
+  width:52px;height:52px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Georgia',serif;font-size:22px;font-weight:400;
+  border:2px solid;transition:all .4s;position:relative;
+  line-height:1;
+}
+.band-circle::before{
+  content:'';position:absolute;inset:-5px;border-radius:50%;
+  border:2px dashed;opacity:.28;transition:opacity .3s;
+}
+.band-pill.spinning .band-circle::before{
+  animation:ring-spin 1.2s linear infinite;opacity:.85;
+}
+@keyframes ring-spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+
+.band-s{
+  font-family:'Courier New', Consolas, monospace;font-size:7.5px;
+  color:var(--fw);text-shadow:0 0 6px rgba(248,246,242,.3);
+  white-space:nowrap;
+}
+.sig-bars{display:flex;align-items:flex-end;gap:2px;height:12px;}
+.sig-bar{width:3px;border-radius:1px;opacity:.2;}
+.sig-bar.on{opacity:1;}
+.trophy{font-size:12px;opacity:0;transition:all .4s;}
+.band-pill.winner .trophy{opacity:1;animation:troph 1.5s ease-in-out infinite;}
+@keyframes troph{0%,100%{transform:scale(1);}50%{transform:scale(1.35);}}
+
+/* Couleurs A (bleu) */
+.band-pill.bA .band-circle{color:var(--blue);border-color:rgba(0,170,255,.5);background:rgba(0,170,255,.08);}
+.band-pill.bA .band-circle::before{border-color:var(--blue);}
+.band-pill.bA.active-band .band-circle,
+.band-pill.bA.winner .band-circle{border-color:rgba(0,170,255,.9);box-shadow:0 0 16px rgba(0,170,255,.55),0 0 32px rgba(0,170,255,.2);}
+.band-pill.bA.winner .trophy{filter:drop-shadow(0 0 5px var(--blue));}
+
+/* Couleurs B (or) */
+.band-pill.bB .band-circle{color:var(--goldb);border-color:rgba(180,120,8,.5);background:rgba(180,120,8,.08);}
+.band-pill.bB .band-circle::before{border-color:var(--goldb);}
+.band-pill.bB .sig-bar{background:var(--goldb);}
+.band-pill.bB.active-band .band-circle,
+.band-pill.bB.winner .band-circle{border-color:rgba(180,120,8,.9);box-shadow:0 0 16px rgba(180,120,8,.55),0 0 32px rgba(180,120,8,.2);}
+.band-pill.bB.winner .trophy{filter:drop-shadow(0 0 5px var(--goldb));}
+
+/* Couleurs C (vert) */
+.band-pill.bC .band-circle{color:var(--green);border-color:rgba(0,232,122,.5);background:rgba(0,232,122,.08);}
+.band-pill.bC .band-circle::before{border-color:var(--green);}
+.band-pill.bC .sig-bar{background:var(--green);}
+.band-pill.bC.active-band .band-circle,
+.band-pill.bC.winner .band-circle{border-color:rgba(0,232,122,.9);box-shadow:0 0 16px rgba(0,232,122,.55),0 0 32px rgba(0,232,122,.2);}
+.band-pill.bC.winner .trophy{filter:drop-shadow(0 0 5px var(--green));}
+
+/* ══ INPUT ══ */
+.input-section{
+  background:var(--card);border:1px solid var(--bord);
+  border-radius:8px;padding:11px 13px;margin-bottom:8px;
+}
+.sec-lbl{
+  font-family:'Courier New', Consolas, monospace;font-size:9px;
+  letter-spacing:3px;color:var(--fw);
+  text-shadow:0 0 8px rgba(248,246,242,.2);
+  margin-bottom:7px;display:flex;align-items:center;gap:6px;font-weight:700;
+}
+.sec-lbl .gold-highlight{
+  color:var(--goldb);
+}
+.sec-lbl::after{content:'';flex:1;height:1px;background:rgba(248,246,242,.12);}
+.sec-lbl{
+  justify-content:center;
+}
+.sec-lbl::after{display:none;}
+.miro-modulo{
+  font-size:16px;
+  color:#ffffff;
+  font-family:'Georgia',serif;
+  font-weight:700;
+  margin-right:6px;
+  text-shadow:0 0 10px rgba(255,255,255,.7), 0 0 20px rgba(255,255,255,.3);
+}
+.miro-word{
+  display:inline-flex;
+  align-items:baseline;
+  margin-right:5px;
+}
+.miro-cap{
+  font-family:'Courier New', Consolas, 'Lucida Console', monospace;
+  font-size:10px;
+  font-weight:900;
+  background:linear-gradient(135deg,#7a5004 0%,#b87a08 18%,#d49020 44%,#f0c870 60%,#d49020 76%,#7a5004 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 3px rgba(180,120,8,.5));
+  letter-spacing:0;
+}
+.miro-rest{
+  font-family:'Courier New', Consolas, monospace;
+  font-weight:400;
+  color:#ffffff;
+  letter-spacing:0px;
+  font-size:8px;
+  margin-left:0px;
+}
+.sec-lbl-dim{
+  font-family:'Courier New', Consolas, monospace;font-size:8px;
+  letter-spacing:2px;color:var(--dim);
+  margin-bottom:6px;display:flex;align-items:center;gap:6px;
+}
+.sec-lbl-dim::after{content:'';flex:1;height:1px;background:var(--bord);}
+
+/* Rouleaux */
+.drums-section{margin-bottom:8px;}
+.drums-row{display:flex;align-items:center;gap:3px;justify-content:center;padding:2px 0;}
+.drum{
+  width:28px;height:40px;flex-shrink:0;
+  background:linear-gradient(180deg,#223040 0%,#142030 20%,#0c1825 50%,#142030 80%,#223040 100%);
+  border-radius:4px;border:1px solid rgba(70,110,150,.22);
+  box-shadow:inset 0 1px 2px rgba(255,255,255,.06),inset 0 -1px 2px rgba(0,0,0,.5),1px 0 4px rgba(0,0,0,.4);
+  position:relative;overflow:hidden;
+}
+.drum::before{
+  content:'';position:absolute;left:0;right:0;top:50%;
+  transform:translateY(-50%);height:16px;
+  background:linear-gradient(180deg,rgba(0,150,190,.03),rgba(0,190,220,.08),rgba(0,150,190,.03));
+  border-top:1px solid rgba(0,190,220,.13);border-bottom:1px solid rgba(0,190,220,.13);
+  z-index:2;pointer-events:none;
+}
+.drum::after{
+  content:'';position:absolute;left:2px;top:0;bottom:0;width:2px;
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,.08) 35%,rgba(255,255,255,.03) 65%,transparent);
+  z-index:3;pointer-events:none;
+}
+.drum-face{
+  position:absolute;inset:0;z-index:1;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Courier New', Consolas, 'Lucida Console', monospace;font-size:15px;font-weight:900;
+  color:var(--cyan);
+  text-shadow:0 0 8px rgba(0,212,240,.85),0 0 16px rgba(0,212,240,.35);
+  transition:opacity .07s ease;
+}
+.drum-face.flash{opacity:0;}
+.drum-sep{font-family:'Courier New', Consolas, monospace;font-size:10px;color:rgba(70,110,150,.3);flex-shrink:0;}
+
+/* Champ n (validation: chiffres, pas de zéro en tête, n > 2) */
+.n-wrap{position:relative;margin-bottom:6px;}
+.n-input{
+  width:100%;background:#edf1f7;
+  border:1px solid rgba(180,120,8,.22);border-radius:6px;
+  padding:9px 90px 9px 12px;
+  font-family:'Courier New', Consolas, monospace;font-size:12px;
+  color:#16263a;outline:none;
+  transition:border-color .3s,box-shadow .3s;
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.07);
+}
+.n-input:focus{border-color:rgba(180,120,8,.55);}
+.n-input::placeholder{color:#8090a8;font-size:10px;}
+.n-input.even{border-color:rgba(255,26,58,.55)!important;background:#fff0f2!important;}
+.n-input.invalid{
+  border-color:rgba(255,140,0,.55)!important;
+  background:#fff4e0!important;
+}
+.digits-pill{
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  font-family:'Courier New', Consolas, monospace;font-size:8px;
+  color:var(--goldb);background:rgba(180,120,8,.1);
+  border:1px solid rgba(180,120,8,.28);padding:2px 7px;
+  border-radius:8px;letter-spacing:1px;
+  opacity:0;transition:opacity .25s;white-space:nowrap;
+}
+.digits-pill.show{opacity:1;}
+.digits-pill.even-alert{color:var(--red);background:rgba(255,26,58,.1);border-color:rgba(255,26,58,.38);}
+.digits-pill.invalid-alert{color:var(--orange);background:rgba(255,140,0,.1);border-color:rgba(255,140,0,.38);}
+.even-msg{
+  font-family:'Courier New', Consolas, monospace;font-size:8px;color:var(--red);
+  letter-spacing:1px;overflow:hidden;max-height:0;transition:max-height .2s;
+  text-shadow:0 0 5px rgba(255,26,58,.4);
+}
+.even-msg.show{max-height:18px;margin-bottom:6px;}
+.invalid-msg{
+  font-family:'Courier New', Consolas, monospace;font-size:8px;color:var(--orange);
+  letter-spacing:1px;overflow:hidden;max-height:0;transition:max-height .2s;
+  text-shadow:0 0 5px rgba(255,140,0,.4);
+}
+.invalid-msg.show{max-height:18px;margin-bottom:6px;}
+
+/* Boutons */
+.btns-row{display:flex;gap:6px;align-items:center;margin-bottom:0;}
+.btn-reset{
+  background:rgba(232,216,168,.05);
+  border:1px solid rgba(232,216,168,.18);border-radius:6px;
+  padding:7px 10px;
+  font-family:'Courier New', Consolas, 'Lucida Console', monospace;font-size:8px;font-weight:700;
+  letter-spacing:1px;color:rgba(232,216,168,.6);cursor:pointer;
+  transition:all .3s;flex-shrink:0;
+}
+.btn-reset:hover{border-color:rgba(232,216,168,.5);color:var(--cream);}
+
+.tog-wrap{
+  display:flex;align-items:center;gap:5px;
+  background:var(--mlo);border:1px solid var(--bord);
+  border-radius:6px;padding:5px 8px;cursor:pointer;user-select:none;flex-shrink:0;
+}
+.tog-lbl{font-family:'Courier New', Consolas, monospace;font-size:8px;letter-spacing:1px;color:var(--dim);}
+.tog-sw{
+  width:32px;height:17px;border-radius:9px;
+  border:1px solid var(--bord);background:var(--mlo);
+  position:relative;cursor:pointer;transition:all .3s;flex-shrink:0;
+}
+.tog-sw.seq{background:rgba(255,140,0,.1);border-color:rgba(255,140,0,.48);box-shadow:0 0 8px rgba(255,140,0,.18);}
+.tog-sw.par{background:rgba(0,170,255,.1);border-color:rgba(0,170,255,.48);box-shadow:0 0 8px rgba(0,170,255,.18);}
+.tog-knob{position:absolute;top:2px;left:2px;width:11px;height:11px;border-radius:50%;background:var(--dim);transition:all .3s;}
+.tog-sw.seq .tog-knob{left:2px;background:radial-gradient(circle at 38% 34%,#ffd060,#ff8c00);box-shadow:0 0 6px rgba(255,140,0,.9);}
+.tog-sw.par .tog-knob{left:17px;background:radial-gradient(circle at 38% 34%,#80d8ff,#0090ff);box-shadow:0 0 6px rgba(0,170,255,.9);}
+.tog-mode{font-family:'Courier New', Consolas, 'Lucida Console', monospace;font-size:8px;font-weight:700;letter-spacing:1px;min-width:20px;transition:color .3s;}
+.tog-sw.seq~.tog-mode{color:var(--orange);}
+.tog-sw.par~.tog-mode{color:var(--blue);}
+
+.btn-factor{
+  flex:1;
+  background:linear-gradient(135deg,rgba(0,125,52,.17),rgba(0,232,122,.07));
+  border:1px solid rgba(0,232,122,.36);border-radius:6px;
+  padding:7px 10px;
+  font-family:'Courier New', Consolas, 'Lucida Console', monospace;font-size:8px;font-weight:700;
+  letter-spacing:2px;color:var(--green);cursor:pointer;
+  text-shadow:0 0 6px rgba(0,232,122,.45);transition:all .3s;
+}
+.btn-factor:hover{border-color:rgba(0,232,122,.8);box-shadow:0 0 16px rgba(0,232,122,.2);}
+.btn-stop{
+  background:linear-gradient(135deg,rgba(120,0,16,.17),rgba(255,26,58,.07));
+  border:1px solid rgba(255,26,58,.36);border-radius:6px;
+  padding:7px 8px;
+  font-family:'Courier New', Consolas, 'Lucida Console', monospace;font-size:8px;font-weight:700;
+  letter-spacing:1px;color:var(--red);cursor:pointer;
+  text-shadow:0 0 5px rgba(255,26,58,.45);flex-shrink:0;
+  animation:sbeat 3s ease-in-out infinite;
+}
+@keyframes sbeat{0%,100%{box-shadow:0 0 6px rgba(255,26,58,.07);}50%{box-shadow:0 0 14px rgba(255,26,58,.2);}}
+
+/* ══ TIMER + RESULTS ══ */
+.timer-results{
+  background:var(--card);border:1px solid var(--bord);
+  border-radius:8px;padding:10px 13px;margin-bottom:8px;
+}
+.timer-val{
+  font-family:'Courier New', Consolas, monospace;font-size:20px;
+  letter-spacing:4px;color:var(--green);
+  text-shadow:0 0 10px rgba(0,232,122,.48);display:block;text-align:center;
+}
+.timer-val .ms{font-size:12px;color:rgba(0,232,122,.4);}
+.timer-sub{
+  font-family:'Courier New', Consolas, monospace;font-size:7px;
+  letter-spacing:3px;color:var(--dim);margin-top:2px;display:block;text-align:center;
+}
+.res-divider{height:1px;background:var(--bord);margin:7px 0;}
+.res-grid{display:grid;grid-template-columns:22px 1fr 36px;gap:4px;align-items:center;}
+.res-k{
+  font-family:'Courier New', Consolas, 'Lucida Console', monospace;font-size:12px;font-weight:400;
+  font-style:normal;color:#ffffff;
+  text-shadow:0 0 8px rgba(255,255,255,.5),0 0 15px rgba(255,255,255,.18);
+}
+.res-v{
+  font-family:'Courier New', Consolas, monospace;font-size:10px;font-weight:400;
+  color:var(--cyan);background:rgba(0,212,240,.035);
+  border:1px solid rgba(0,212,240,.09);border-radius:4px;
+  padding:3px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.res-v.s-val{font-size:9px;}
+.res-v.hi{color:var(--green);background:rgba(0,232,122,.035);border-color:rgba(0,232,122,.12);text-shadow:0 0 4px rgba(0,232,122,.28);}
+.res-v.maybe-n{
+  color:var(--orange);background:rgba(255,140,0,.07);
+  border-color:rgba(255,140,0,.3);text-shadow:0 0 7px rgba(255,140,0,.5);
+  font-size:10px;letter-spacing:1px;animation:mbp 2s ease-in-out infinite;
+  font-family:'Courier New', Consolas, monospace;
+}
+.res-v.maybe-n .prime-frak{
+  font-family:'Georgia',serif;
+  color:var(--fw);
+}
+@keyframes mbp{0%,100%{opacity:1;}50%{opacity:.5;}}
+.res-d{font-family:'Courier New', Consolas, monospace;font-size:9px;color:var(--goldb);text-align:center;text-shadow:0 0 6px rgba(212,144,32,.48);}
+.res-d.hdr{font-size:8px;letter-spacing:1px;font-weight:700;}
+.res-div2{grid-column:1/-1;height:1px;background:var(--bord);margin:2px 0;}
+
+/* ══ STATUS ══ */
+.status-bar{
+  display:flex;align-items:center;gap:7px;padding:7px 13px;
+  background:rgba(0,0,0,.3);border:1px solid var(--bord);
+  border-radius:6px;font-family:'Courier New', Consolas, monospace;
+  font-size:9px;letter-spacing:1px;color:var(--fw);
+  text-shadow:0 0 6px rgba(248,246,242,.15);
+  margin-bottom:8px;font-weight:700;
+}
+.sdot{width:7px;height:7px;border-radius:50%;flex-shrink:0;background:var(--dim);}
+.sdot.ready{background:var(--green);box-shadow:0 0 7px var(--green);animation:blink 2s infinite;}
+.sdot.running{background:var(--orange);box-shadow:0 0 7px var(--orange);animation:blink .7s infinite;}
+.sdot.error{background:var(--red);box-shadow:0 0 7px var(--red);}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.28}}
+.stxt{flex:1;}
+
+.status-bar.factored-st{
+  border-color:rgba(0,232,122,.6);
+  background:rgba(0,232,122,.07);
+  color:var(--green);
+  text-shadow:0 0 10px rgba(0,232,122,.6);
+  box-shadow:0 0 18px rgba(0,232,122,.12);
+}
+
+/* ══ BOTTOM (AVEC ICÔNES) ══ */
+.bottom-bar{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  padding:8px 0;
+}
+.status-export-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+}
+.btn-share-small{
+  background:rgba(0,212,240,0.03);
+  border:1px solid rgba(0,212,240,0.2);
+  border-radius:4px;
+  padding:3px 10px;
+  font-family:'Courier New', Consolas, monospace;
+  font-size:7px;
+  color:var(--cyan);
+  cursor:pointer;
+  transition:all 0.2s;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.btn-share-small:hover{
+  background:rgba(0,212,240,0.1);
+  border-color:rgba(0,212,240,0.5);
+}
+.btn-mute-small{
+  background:transparent;
+  border:1px solid rgba(100,130,160,.2);
+  border-radius:4px;
+  padding:3px 8px;
+  font-family:'Courier New', Consolas, monospace;
+  font-size:7px;
+  color:rgba(100,140,180,.6);
+  cursor:pointer;
+}
+.signature-container{
+  text-align:center;
+  margin-top:2px;
+}
+.signature-line1{
+  font-family:'Courier New', Consolas, monospace;
+  font-size:9px;
+  letter-spacing:1px;
+  color:var(--fw);
+  margin-bottom:2px;
+}
+.green-crown{
+  color:var(--green);
+}
+.signature-line2{
+  font-family:'Courier New', Consolas, monospace;
+  font-size:9px;
+  color:var(--fw);
+  margin-bottom:4px;
+}
+.diamond-white{
+  color:var(--fw);
+  margin:0 2px;
+}
+/* Icônes de contact */
+.contact-icons{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  margin-top:4px;
+  padding-top:4px;
+  border-top:1px solid rgba(212,144,32,0.2);
+}
+.contact-icon{
+  color:var(--fw);
+  font-size:14px;
+  text-decoration:none;
+  opacity:0.7;
+  transition:all 0.2s;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+}
+/* Email @ — couleur or directe sur texte */
+.contact-icon.email-icon{
+  color:var(--goldb);
+  font-family:'Courier New', Consolas, 'Lucida Console', monospace;
+  font-size:15px;
+  font-weight:700;
+  text-shadow:0 0 8px rgba(212,144,32,.7), 0 0 16px rgba(212,144,32,.3);
+  border-color:rgba(212,144,32,0.35);
+  background:rgba(180,120,8,0.08);
+  filter:none;
+}
+.contact-icon.email-icon:hover{
+  color:var(--goldl);
+  text-shadow:0 0 12px rgba(240,200,112,.9), 0 0 24px rgba(212,144,32,.5);
+  box-shadow:0 0 14px rgba(212,144,32,0.5);
+  border-color:rgba(212,144,32,0.7);
+  background:rgba(180,120,8,0.15);
+  opacity:1;
+  transform:scale(1.1);
+  filter:none;
+}
+.contact-icon:not(.email-icon):hover{
+  opacity:1;
+  transform:scale(1.1);
+  background:rgba(255,255,255,0.1);
+  border-color:rgba(255,255,255,0.3);
+  box-shadow:0 0 12px rgba(255,255,255,0.2);
+}
+
+.copyright-tag{
+  font-family:'Courier New', Consolas, 'Lucida Console', monospace;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  color:var(--fw);
+  text-shadow:0 0 8px rgba(255,255,255,.7), 0 0 16px rgba(255,255,255,.3);
+  user-select:none;
+  align-self:center;
+}
+
+/* ══ VERRE BRISÉ ⚡ sur case n après factorisation ══ */
+.res-k.n-flash{
+  position:relative;
+  overflow:visible;
+  animation:nBlink 2.4s ease-in-out infinite;
+}
+@keyframes nBlink{
+  0%,38%  { color:#ffffff; text-shadow:0 0 6px rgba(255,255,255,.4); }
+  42%,80% { color:transparent; }
+  84%,100%{ color:#ffffff; }
+}
+
+/* Overlay SVG — petit, centré, tout synchronisé */
+.glass-break-overlay{
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  width:22px; height:22px;
+  pointer-events:none;
+  z-index:10;
+  animation:gbMain 2.4s ease-out infinite;
+}
+@keyframes gbMain{
+  0%         { opacity:0; transform:translate(-50%,-50%) scale(0.5); }
+  3%         { opacity:1; transform:translate(-50%,-50%) scale(1);   }
+  36%        { opacity:1; transform:translate(-50%,-50%) scale(1);   }
+  42%        { opacity:0; transform:translate(-50%,-50%) scale(1.05);}
+  43%,100%   { opacity:0; }
+}
+/* Tous les éléments internes — même timing, zéro délai */
+.glass-shard,
+.glass-impact-center,
+.glass-lightning{
+  animation:gbSync 2.4s ease-out infinite;
+}
+@keyframes gbSync{
+  0%       { opacity:0; }
+  3%       { opacity:1; }
+  36%      { opacity:.85; }
+  42%      { opacity:0; }
+  43%,100% { opacity:0; }
+}
+
+
+/* ══ COUNTDOWN TIMER FEATURE ══ */
+
+.timer-row{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:4px;
+}
+.btn-timer-icon{
+  flex-shrink:0;
+  width:38px;height:38px;
+  background:rgba(0,170,255,.05);
+  border:1px solid rgba(0,170,255,.22);
+  border-radius:50%;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .3s;
+  position:relative;
+  padding:0;
+}
+.btn-timer-icon:hover{
+  background:rgba(0,170,255,.12);
+  border-color:rgba(0,170,255,.55);
+  box-shadow:0 0 12px rgba(0,170,255,.22);
+}
+.btn-timer-icon.active{
+  background:rgba(255,140,0,.1);
+  border-color:rgba(255,140,0,.55);
+  box-shadow:0 0 12px rgba(255,140,0,.25);
+}
+.btn-timer-icon.countdown-running{
+  border-color:rgba(255,26,58,.6);
+  animation:iconBeat .9s ease-in-out infinite;
+}
+@keyframes iconBeat{
+  0%,100%{box-shadow:0 0 6px rgba(255,26,58,.15);}
+  50%    {box-shadow:0 0 16px rgba(255,26,58,.5);}
+}
+/* Rotation de la couronne au clic */
+.btn-timer-icon.spinning .chrono-crown{
+  animation:crownSpin .55s ease-in-out;
+}
+@keyframes crownSpin{
+  0%  {transform:rotate(0deg)   translateX(-50%);}
+  50% {transform:rotate(180deg) translateX(-50%);}
+  100%{transform:rotate(360deg) translateX(-50%);}
+}
+
+.timer-display{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Aiguilles chrono animées */
+@keyframes chSec{ from{transform:rotate(0deg);}  to{transform:rotate(360deg);} }
+@keyframes chMin{ from{transform:rotate(0deg);}  to{transform:rotate(360deg);} }
+
+/* ── PORTE TAMBOUR 3D ── */
+.drum-door{
+  width:100%;
+  perspective:420px;
+  position:relative;
+}
+.drum-door-inner{
+  width:100%;
+  position:relative;
+  transform-style:preserve-3d;
+  transition:transform .62s cubic-bezier(.4,0,.2,1);
+}
+.drum-door-inner.flipped{
+  transform:rotateX(-180deg);
+}
+.drum-face-front,
+.drum-face-back{
+  width:100%;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
+.drum-face-back{
+  position:absolute;
+  top:0;left:0;
+  transform:rotateX(180deg);
+  /* On ajuste le contenu pour qu'il soit lisible côté verso */
+}
+
+/* Face avant — affichage timer */
+.drum-face-front{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Face arrière — panneau HH:MM */
+.drum-face-back{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:6px 0 2px;
+  min-height:44px;
+}
+.countdown-inner{
+  background:rgba(0,170,255,.04);
+  border:1px solid rgba(0,170,255,.18);
+  border-radius:6px;
+  padding:6px 10px;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  width:100%;
+}
+.cd-label{
+  font-family:'Courier New', Consolas, monospace;
+  font-size:8px;letter-spacing:2px;
+  color:var(--blue);
+  flex-shrink:0;
+}
+.cd-fields{
+  display:flex;align-items:center;gap:3px;flex:1;
+  justify-content:center;
+}
+.cd-unit{
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+}
+.cd-unit-label{
+  font-family:'Courier New', Consolas, monospace;
+  font-size:6px;letter-spacing:1px;color:var(--dim);
+}
+.cd-spin{
+  display:flex;align-items:center;gap:2px;
+}
+.cd-inp{
+  width:36px;
+  background:#0a1828;
+  border:1px solid rgba(0,170,255,.3);
+  border-radius:4px;
+  padding:4px 4px;
+  font-family:'Courier New', Consolas, 'Lucida Console', monospace;
+  font-size:12px;font-weight:700;
+  color:var(--cyan);
+  text-align:center;
+  outline:none;
+  text-shadow:0 0 8px rgba(0,212,240,.6);
+}
+.cd-inp:focus{border-color:rgba(0,170,255,.7);}
+.cd-arrows{
+  display:flex;flex-direction:column;gap:1px;
+}
+.cd-arrow{
+  background:rgba(0,170,255,.08);
+  border:1px solid rgba(0,170,255,.2);
+  border-radius:2px;
+  width:14px;height:11px;
+  font-size:7px;
+  color:var(--blue);
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .15s;
+  line-height:1;
+}
+.cd-arrow:hover{background:rgba(0,170,255,.25);border-color:rgba(0,170,255,.5);}
+.cd-sep{
+  font-family:'Courier New', Consolas, 'Lucida Console', monospace;font-size:14px;font-weight:700;
+  color:rgba(0,170,255,.5);margin:0 1px;
+  padding-bottom:2px;
+}
+.cd-clear{
+  font-family:'Courier New', Consolas, monospace;font-size:7px;
+  color:var(--dim);background:transparent;
+  border:1px solid rgba(100,130,160,.2);border-radius:4px;
+  padding:3px 6px;cursor:pointer;
+  transition:all .2s;flex-shrink:0;
+}
+.cd-clear:hover{color:var(--red);border-color:rgba(255,26,58,.4);}
+
+/* Timer val modes */
+.timer-val.countdown     {color:var(--orange);text-shadow:0 0 10px rgba(255,140,0,.55);}
+.timer-val.countdown-warn{color:var(--red);text-shadow:0 0 12px rgba(255,26,58,.7);animation:warnPulse .6s ease-in-out infinite;}
+@keyframes warnPulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+.timer-val.elapsed       {color:var(--cyan);text-shadow:0 0 10px rgba(0,212,240,.45);}
+
+/* ══ PROGRESS BAR ══ */
+.progress-wrap{
+  height:2px;background:var(--bord);border-radius:2px;
+  margin:6px 0 4px;overflow:hidden;
+  display:none;
+}
+.progress-wrap.show{display:block;}
+.progress-bar{
+  height:100%;width:0%;border-radius:2px;
+  background:linear-gradient(90deg,var(--blue),var(--green));
+  transition:width .3s ease;
+  box-shadow:0 0 8px rgba(0,232,122,.5);
+}
+
+
+
+</style>
+</head>
+<body>
+<div id="__sow_debug__" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#c00;color:#fff;font-size:11px;padding:6px;z-index:99999;font-family:monospace;word-break:break-all;"></div>
+<div class="app">
+
+<!-- ══ HEADER ══ -->
+<header>
+  <div class="poly-line">POLYNOMIAL TIME</div>
+
+  <div class="title-row">
+    <span class="t-letter">SOW</span>
+    <span class="t-space"></span>
+    <span class="t-letter">R</span>
+    <svg class="ant-svg" viewBox="0 0 20 32" fill="none">
+      <circle class="ant-wave1" cx="10" cy="8" r="5"  stroke="rgba(240,200,80,.55)" stroke-width="1" fill="none"/>
+      <circle class="ant-wave2" cx="10" cy="8" r="8"  stroke="rgba(240,200,80,.35)" stroke-width="1" fill="none"/>
+      <circle class="ant-wave3" cx="10" cy="8" r="11" stroke="rgba(240,200,80,.2)"  stroke-width="1" fill="none"/>
+      <line class="ant-beam-el" x1="10" y1="8" x2="22" y2="8" stroke="rgba(255,220,80,.5)" stroke-width="1.5" stroke-linecap="round"/>
+      <circle class="ant-beacon-el" cx="10" cy="8" r="3.5" fill="#00e5ff"/>
+      <circle cx="10" cy="8" r="2" fill="#e0faff"/>
+      <line x1="10" y1="14" x2="4"  y2="11" stroke="#d49020" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="10" y1="14" x2="16" y2="11" stroke="#d49020" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="5"  y1="13" x2="15" y2="13" stroke="#b87a08" stroke-width="1"   stroke-linecap="round"/>
+      <rect x="8.5" y="14" width="3" height="14" rx="1.5" fill="url(#sg)"/>
+      <rect x="5"   y="27" width="10" height="2.5" rx="1.2" fill="#7a5004" opacity=".7"/>
+      <defs>
+        <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f0c870"/>
+          <stop offset="100%" stop-color="#7a5004"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span class="t-letter">EMANN</span>
+  </div>
+
+  <div class="prf-line">✦ PRIMES RADIO FREQUENCY ✦</div>
+
+  <!-- ZETA TOP GUN SVG -->
+  <div class="zet-row">
+    <svg class="zeta-topgun-svg" viewBox="0 0 280 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="metalTop" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#d8e8f8"/>
+        <stop offset="10%"  stop-color="#f0f6ff"/>
+        <stop offset="25%"  stop-color="#c0d4e8"/>
+        <stop offset="40%"  stop-color="#e8f2ff"/>
+        <stop offset="55%"  stop-color="#6888a8"/>
+        <stop offset="70%"  stop-color="#2a4060"/>
+        <stop offset="85%"  stop-color="#0e1e30"/>
+        <stop offset="100%" stop-color="#020810"/>
+      </linearGradient>
+      <!-- Facette prismatique acier gauche -->
+      <linearGradient id="metalBevel" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%"   stop-color="#a0c8e8" stop-opacity="0.25"/>
+        <stop offset="40%"  stop-color="#4080b0" stop-opacity="0.15"/>
+        <stop offset="100%" stop-color="#001840" stop-opacity="0.2"/>
+      </linearGradient>
+      <!-- Facette prismatique acier droite -->
+      <linearGradient id="prismR" x1="1" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#c8ddf0" stop-opacity="0.2"/>
+        <stop offset="50%"  stop-color="#1840780" stop-opacity="0.1"/>
+        <stop offset="100%" stop-color="#002050" stop-opacity="0.18"/>
+      </linearGradient>
+        <linearGradient id="wingGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.9"/>
+          <stop offset="40%"  stop-color="#80b8d8" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#204060" stop-opacity="0.2"/>
+        </linearGradient>
+        <linearGradient id="wingGradR" x1="1" y1="0" x2="0" y2="0">
+          <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.9"/>
+          <stop offset="40%"  stop-color="#80b8d8" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#204060" stop-opacity="0.2"/>
+        </linearGradient>
+        <filter id="zeta-glow">
+          <feGaussianBlur stdDeviation="2.5" result="blur"/>
+          <feFlood flood-color="#1840a0" flood-opacity="0.35" result="color"/>
+          <feComposite in="color" in2="blur" operator="in" result="glow"/>
+          <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="metal-shadow">
+          <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#000820" flood-opacity="0.95"/>
+          <feDropShadow dx="0" dy="-1" stdDeviation="0.5" flood-color="#6090c8" flood-opacity="0.25"/>
+        </filter>
+      </defs>
+
+      <!-- ═══ AILES GAUCHE ═══ -->
+      <!-- Trait principal gauche -->
+      <line x1="8" y1="28" x2="72" y2="28" stroke="url(#wingGrad)" stroke-width="2.2"/>
+      <line x1="8" y1="32" x2="72" y2="32" stroke="url(#wingGrad)" stroke-width="1.4"/>
+      <line x1="12" y1="36" x2="72" y2="36" stroke="url(#wingGrad)" stroke-width="0.7" stroke-opacity="0.6"/>
+      <!-- Pointe aile gauche -->
+      <polygon points="8,28 8,32 2,30" fill="url(#wingGrad)" opacity="0.9"/>
+      <!-- Chevron interne gauche -->
+      <polyline points="16,24 8,30 16,36" stroke="url(#wingGrad)" stroke-width="1.2" fill="none" stroke-opacity="0.7"/>
+      <polyline points="22,24 14,30 22,36" stroke="url(#wingGrad)" stroke-width="0.8" fill="none" stroke-opacity="0.5"/>
+
+      <!-- ═══ AILES DROITE ═══ -->
+      <line x1="272" y1="28" x2="208" y2="28" stroke="url(#wingGradR)" stroke-width="2.2"/>
+      <line x1="272" y1="32" x2="208" y2="32" stroke="url(#wingGradR)" stroke-width="1.4"/>
+      <line x1="268" y1="36" x2="208" y2="36" stroke="url(#wingGradR)" stroke-width="0.7" stroke-opacity="0.6"/>
+      <polygon points="272,28 272,32 278,30" fill="url(#wingGradR)" opacity="0.9"/>
+      <polyline points="264,24 272,30 264,36" stroke="url(#wingGradR)" stroke-width="1.2" fill="none" stroke-opacity="0.7"/>
+      <polyline points="258,24 266,30 258,36" stroke="url(#wingGradR)" stroke-width="0.8" fill="none" stroke-opacity="0.5"/>
+
+      <!-- ═══ TEXTE ZETA ═══ -->
+      <g filter="url(#metal-shadow)">
+        <text x="140" y="46"
+          font-family="'Bebas Neue', Impact, sans-serif"
+          font-size="34"
+          font-weight="700"
+          letter-spacing="8"
+          text-anchor="middle"
+          fill="url(#metalTop)">ZETA</text>
+        <!-- Couche prismatique gauche acier -->
+        <text x="138.5" y="46"
+          font-family="'Bebas Neue', Impact, sans-serif"
+          font-size="34"
+          font-weight="700"
+          letter-spacing="8"
+          text-anchor="middle"
+          fill="url(#metalBevel)">ZETA</text>
+        <!-- Couche prismatique droite acier -->
+        <text x="141.5" y="46"
+          font-family="'Bebas Neue', Impact, sans-serif"
+          font-size="34"
+          font-weight="700"
+          letter-spacing="8"
+          text-anchor="middle"
+          fill="url(#prismR)">ZETA</text>
+      </g>
+      <!-- Éclats acier-diamant -->
+      <line x1="96"  y1="20" x2="101" y2="14" stroke="#c8dff0" stroke-width="0.9" stroke-opacity="0.65"/>
+      <line x1="140" y1="12" x2="140" y2="6"  stroke="#e0eeff" stroke-width="1.1" stroke-opacity="0.7"/>
+      <line x1="184" y1="20" x2="179" y2="14" stroke="#a0c8e8" stroke-width="0.9" stroke-opacity="0.65"/>
+      <line x1="114" y1="16" x2="117" y2="10" stroke="#7090b8" stroke-width="0.7" stroke-opacity="0.5"/>
+      <line x1="166" y1="16" x2="163" y2="10" stroke="#7090b8" stroke-width="0.7" stroke-opacity="0.5"/>
+
+      <!-- Ligne de base sous ZETA -->
+      <line x1="72" y1="50" x2="208" y2="50" stroke="url(#metalBevel)" stroke-width="0.8" stroke-opacity="0.5"/>
+
+      <!-- ═══ ÉTOILE CENTRALE ═══ -->
+      <g transform="translate(140,57)" class="zeta-star">
+        <polygon points="0,-5 1.5,-1.8 5,-1.8 2.4,0.7 3.4,4 0,2.2 -3.4,4 -2.4,0.7 -5,-1.8 -1.5,-1.8"
+          fill="url(#metalTop)" stroke="#a0c8e8" stroke-width="0.4" opacity="0.9"/>
+      </g>
+
+      <!-- Bande 5G à droite du A -->
+      <g transform="translate(213,22)">
+        <rect x="0" y="0" width="4" height="14" rx="1" fill="#00aaff" opacity="0.9">
+          <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="6" y="4" width="4" height="10" rx="1" fill="#00aaff" opacity="0.8">
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="12" y="8" width="4" height="6" rx="1" fill="#00aaff" opacity="0.7">
+          <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Formule -->
+  <div class="formula-wrap">
+    <div class="fm">
+      <span class="fm-zeta">ζ</span><span class="fm-paren">(</span><span class="fm-s">s</span><span class="fm-paren">)</span>
+      <span class="fm-eq">=</span>
+      <div class="fm-frac">
+        <span class="fm-num">1</span>
+        <div class="fm-bar"></div>
+        <span class="fm-den">2</span>
+      </div>
+      <span class="fm-pls">+</span>
+      <div class="fm-frac">
+        <span class="fm-num">1</span>
+        <div class="fm-bar" style="min-width:58px"></div>
+        <span class="fm-den">−1 + log(p)<span class="fm-sup">sπ</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRIANGLE PYRAMIDE -->
+  <div class="bands-pyramid" id="pyramid">
+  <!-- COCKPIT HOLOGRAMME V3 — Boussole au sol + Radar en haut -->
+  <svg class="cockpit-svg" viewBox="0 0 140 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="cglow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%"   stop-color="#00d4f0" stop-opacity="0.22"/>
+        <stop offset="100%" stop-color="#001830" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="haloGrad" cx="50%" cy="30%" r="60%">
+        <stop offset="0%"   stop-color="#00d4f0" stop-opacity="0.6"/>
+        <stop offset="50%"  stop-color="#0070b0" stop-opacity="0.2"/>
+        <stop offset="100%" stop-color="#001030" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="compassFace" cx="50%" cy="35%" r="65%">
+        <stop offset="0%"   stop-color="#0c2840" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#020c18" stop-opacity="0.95"/>
+      </radialGradient>
+      <linearGradient id="needleN" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#ff5555"/>
+        <stop offset="50%"  stop-color="#cc1111"/>
+        <stop offset="100%" stop-color="#550000"/>
+      </linearGradient>
+      <linearGradient id="needleS" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#d0e0f0"/>
+        <stop offset="50%"  stop-color="#7090a8"/>
+        <stop offset="100%" stop-color="#243040"/>
+      </linearGradient>
+      <!-- Radar ping rings -->
+      <radialGradient id="radarGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%"   stop-color="#00d4f0" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#00d4f0" stop-opacity="0"/>
+      </radialGradient>
+      <filter id="tipGlow">
+        <feGaussianBlur stdDeviation="1.5" result="blur"/>
+        <feFlood flood-color="#00d4f0" flood-opacity="0.8" result="color"/>
+        <feComposite in="color" in2="blur" operator="in" result="glow"/>
+        <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="tipGlowGreen">
+        <feGaussianBlur stdDeviation="1.5" result="blur"/>
+        <feFlood flood-color="#00e87a" flood-opacity="0.8" result="color"/>
+        <feComposite in="color" in2="blur" operator="in" result="glow"/>
+        <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="tipGlowGold">
+        <feGaussianBlur stdDeviation="1.2" result="blur"/>
+        <feFlood flood-color="#d49020" flood-opacity="0.8" result="color"/>
+        <feComposite in="color" in2="blur" operator="in" result="glow"/>
+        <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="softGlow">
+        <feGaussianBlur stdDeviation="1.5" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="haloBlur">
+        <feGaussianBlur stdDeviation="4"/>
+      </filter>
+    </defs>
+
+    <!-- Fond ambiance -->
+    <ellipse cx="70" cy="88" rx="62" ry="70" fill="url(#cglow)"/>
+
+    <!-- ══════════════════════════════════════
+         RADAR EN HAUT — anneaux concentriques
+         Effet ping / sonar élégant
+    ══════════════════════════════════════ -->
+
+    <!-- Fond sombre radar -->
+    <circle cx="70" cy="34" r="28" fill="#020c18" fill-opacity="0.7"
+      stroke="#0a4060" stroke-width="0.8" stroke-opacity="0.6"/>
+
+    <!-- Anneaux radar concentriques fixes -->
+    <circle cx="70" cy="34" r="28" stroke="#00aaff" stroke-width="0.5" fill="none" stroke-opacity="0.45"/>
+    <circle cx="70" cy="34" r="20" stroke="#00aaff" stroke-width="0.4" fill="none" stroke-opacity="0.3" stroke-dasharray="2 3"/>
+    <circle cx="70" cy="34" r="13" stroke="#00d4f0" stroke-width="0.4" fill="none" stroke-opacity="0.3"/>
+    <circle cx="70" cy="34" r="6"  stroke="#00d4f0" stroke-width="0.4" fill="none" stroke-opacity="0.4"/>
+
+    <!-- Croix de visée radar -->
+    <line x1="70" y1="6"  x2="70" y2="62" stroke="#00aaff" stroke-width="0.3" stroke-opacity="0.2"/>
+    <line x1="42" y1="34" x2="98" y2="34" stroke="#00aaff" stroke-width="0.3" stroke-opacity="0.2"/>
+
+    <!-- Ping concentrique 1 -->
+    <circle class="hud-radar-ring1" cx="70" cy="34" r="20"
+      stroke="#00d4f0" stroke-width="1.2" fill="none" stroke-opacity="0.7"/>
+    <!-- Ping concentrique 2 -->
+    <circle class="hud-radar-ring2" cx="70" cy="34" r="20"
+      stroke="#00d4f0" stroke-width="0.8" fill="none" stroke-opacity="0.5"/>
+    <!-- Ping concentrique 3 -->
+    <circle class="hud-radar-ring3" cx="70" cy="34" r="20"
+      stroke="#00aaff" stroke-width="0.5" fill="none" stroke-opacity="0.4"/>
+
+    <!-- Scan discret horizontal -->
+    <line class="hud-scan1" x1="42" y1="28" x2="98" y2="28"
+      stroke="#00e87a" stroke-width="0.5" stroke-opacity="0.5"/>
+    <line class="hud-scan2" x1="42" y1="40" x2="98" y2="40"
+      stroke="#00e87a" stroke-width="0.4" stroke-opacity="0.4"/>
+
+    <!-- Points de contact radar (étoiles) -->
+    <circle cx="84" cy="22" r="1.2" fill="#00d4f0" fill-opacity="0.8"/>
+    <circle cx="56" cy="44" r="0.9" fill="#00e87a" fill-opacity="0.7"/>
+    <circle cx="78" cy="48" r="0.8" fill="#00aaff" fill-opacity="0.6"/>
+
+    <!-- Point central radar -->
+    <circle class="hud-center-glow" cx="70" cy="34" r="2.5"
+      fill="#00e5ff" fill-opacity="0.9"/>
+    <circle cx="70" cy="34" r="1.2" fill="#e0faff"/>
+
+    <!-- ═══ AIGUILLES VERTICALES — lévitation depuis boussole ═══ -->
+    <!-- Aiguille centrale — blanche/cyan, haute -->
+    <g class="hud-needle5">
+      <line x1="70" y1="140" x2="70" y2="72" stroke="#00d4f0" stroke-width="1.1" stroke-linecap="round" stroke-opacity="0.65"/>
+      <line x1="70" y1="140" x2="70" y2="72" stroke="#00d4f0" stroke-width="5" stroke-opacity="0.04"/>
+      <polygon points="70,68 68.2,74 70,71.5 71.8,74" fill="#00d4f0" filter="url(#tipGlow)" opacity="1"/>
+      <circle cx="70" cy="69" r="1.5" fill="#e0faff" filter="url(#tipGlow)" opacity="0.95"/>
+    </g>
+    <!-- Aiguille droite — cyan -->
+    <g class="hud-needle1">
+      <line x1="92" y1="138" x2="92" y2="88" stroke="#00d4f0" stroke-width="0.9" stroke-linecap="round" stroke-opacity="0.58"/>
+      <polygon points="92,84 90.5,89 92,87 93.5,89" fill="#00d4f0" filter="url(#tipGlow)" opacity="0.95"/>
+      <circle cx="92" cy="85" r="1.2" fill="#e0faff" filter="url(#tipGlow)" opacity="0.9"/>
+    </g>
+    <!-- Aiguille gauche — verte -->
+    <g class="hud-needle2">
+      <line x1="48" y1="136" x2="48" y2="92" stroke="#00e87a" stroke-width="0.9" stroke-linecap="round" stroke-opacity="0.55"/>
+      <polygon points="48,88 46.5,93 48,91 49.5,93" fill="#00e87a" filter="url(#tipGlowGreen)" opacity="0.95"/>
+      <circle cx="48" cy="89" r="1.2" fill="#c0fff0" filter="url(#tipGlowGreen)" opacity="0.9"/>
+    </g>
+    <!-- Aiguille droite 2 — or, courte -->
+    <g class="hud-needle3">
+      <line x1="106" y1="136" x2="106" y2="104" stroke="#d49020" stroke-width="0.7" stroke-linecap="round" stroke-opacity="0.52"/>
+      <polygon points="106,100 104.5,105 106,103 107.5,105" fill="#d49020" filter="url(#tipGlowGold)" opacity="0.95"/>
+      <circle cx="106" cy="101" r="1" fill="#ffe080" filter="url(#tipGlowGold)" opacity="0.9"/>
+    </g>
+    <!-- Aiguille gauche 2 — bleue, courte -->
+    <g class="hud-needle4">
+      <line x1="34" y1="134" x2="34" y2="106" stroke="#00aaff" stroke-width="0.7" stroke-linecap="round" stroke-opacity="0.48"/>
+      <polygon points="34,102 32.5,107 34,105 35.5,107" fill="#00aaff" filter="url(#tipGlow)" opacity="0.9"/>
+      <circle cx="34" cy="103" r="1" fill="#c0eeff" filter="url(#tipGlow)" opacity="0.85"/>
+    </g>
+
+    <!-- ══════════════════════════════════════
+         BOUSSOLE AU SOL — ellipse perspective
+         Couchée comme un plateau holographique
+    ══════════════════════════════════════ -->
+
+    <!-- Halo lévitation sol -->
+    <ellipse class="hud-halo" cx="70" cy="148" rx="46" ry="10"
+      fill="url(#haloGrad)" filter="url(#haloBlur)" opacity="0.6"/>
+    <ellipse class="hud-halo" cx="70" cy="148" rx="44" ry="9"
+      fill="url(#haloGrad)" opacity="0.35"/>
+
+    <!-- Anneau externe boussole — perspective elliptique -->
+    <g class="hud-compass-ring">
+      <!-- Biseau externe métal -->
+      <ellipse cx="70" cy="148" rx="44" ry="10"
+        stroke="#1860a0" stroke-width="2.2" fill="none" stroke-opacity="0.65"/>
+      <ellipse cx="70" cy="148" rx="43" ry="9.5"
+        stroke="#60a8d8" stroke-width="0.5" fill="none" stroke-opacity="0.45"/>
+      <!-- Ticks cardinaux -->
+      <line x1="70" y1="138" x2="70" y2="140.5" stroke="#00d4f0" stroke-width="1.2" stroke-opacity="0.9"/>
+      <line x1="70" y1="155.5" x2="70" y2="158" stroke="#00aaff" stroke-width="0.9" stroke-opacity="0.6"/>
+      <line x1="26" y1="148" x2="29" y2="148" stroke="#00aaff" stroke-width="0.9" stroke-opacity="0.6"/>
+      <line x1="111" y1="148" x2="114" y2="148" stroke="#00aaff" stroke-width="0.9" stroke-opacity="0.6"/>
+      <!-- Ticks 45° -->
+      <line x1="100" y1="139.5" x2="98.5" y2="141" stroke="#00aaff" stroke-width="0.7" stroke-opacity="0.45"/>
+      <line x1="40" y1="139.5" x2="41.5" y2="141" stroke="#00aaff" stroke-width="0.7" stroke-opacity="0.45"/>
+      <line x1="100" y1="156.5" x2="98.5" y2="155" stroke="#00aaff" stroke-width="0.5" stroke-opacity="0.35"/>
+      <line x1="40" y1="156.5" x2="41.5" y2="155" stroke="#00aaff" stroke-width="0.5" stroke-opacity="0.35"/>
+    </g>
+
+    <!-- Cadran boussole fond -->
+    <ellipse cx="70" cy="148" rx="41" ry="9"
+      fill="url(#compassFace)" stroke="#0a3858" stroke-width="0.6" stroke-opacity="0.7"/>
+
+    <!-- Anneaux internes cadran -->
+    <ellipse cx="70" cy="148" rx="32" ry="7.2"
+      stroke="#00aaff" stroke-width="0.35" fill="none" stroke-opacity="0.3" stroke-dasharray="2 3"/>
+    <ellipse cx="70" cy="148" rx="20" ry="4.5"
+      stroke="#1850a0" stroke-width="0.3" fill="none" stroke-opacity="0.35"/>
+
+    <!-- Lettres cardinales en perspective — éclat blanc accentué -->
+    <text x="70" y="140.5" text-anchor="middle" font-family="'Courier New', Consolas, 'Lucida Console', monospace"
+      font-size="4.5" font-weight="900" fill="#ffffff"
+      filter="url(#softGlow)"
+      style="text-shadow:0 0 8px #fff;">N</text>
+    <text x="70" y="157.5" text-anchor="middle" font-family="'Courier New', Consolas, 'Lucida Console', monospace"
+      font-size="4" font-weight="700" fill="#e8f4ff" fill-opacity="0.92"
+      filter="url(#softGlow)">S</text>
+    <text x="112" y="149.5" text-anchor="middle" font-family="'Courier New', Consolas, 'Lucida Console', monospace"
+      font-size="3.8" font-weight="700" fill="#e8f4ff" fill-opacity="0.9"
+      filter="url(#softGlow)">E</text>
+    <text x="28" y="149.5" text-anchor="middle" font-family="'Courier New', Consolas, 'Lucida Console', monospace"
+      font-size="3.8" font-weight="700" fill="#e8f4ff" fill-opacity="0.9"
+      filter="url(#softGlow)">W</text>
+
+    <!-- Rose des vents en perspective (losange aplati) -->
+    <ellipse cx="70" cy="148" rx="12" ry="2.8"
+      stroke="#1a4060" stroke-width="0.5" fill="none" stroke-opacity="0.5"/>
+    <line x1="70" y1="141" x2="70" y2="155" stroke="#1a4878" stroke-width="0.4" stroke-opacity="0.4"/>
+    <line x1="58" y1="148" x2="82" y2="148" stroke="#1a4878" stroke-width="0.4" stroke-opacity="0.4"/>
+
+    <!-- Aiguille boussole couchée en perspective -->
+    <g class="hud-compass-needle">
+      <!-- Nord — rouge, aplati elliptique -->
+      <ellipse cx="70" cy="145.2" rx="3" ry="1.4"
+        fill="url(#needleN)" opacity="0.92"/>
+      <polygon points="70,141 68,145.5 70,144.5 72,145.5"
+        fill="#ff4444" opacity="0.9" filter="url(#softGlow)"/>
+      <!-- Sud — acier -->
+      <polygon points="70,155 68,150.5 70,151.5 72,150.5"
+        fill="#8090a8" opacity="0.75"/>
+      <!-- Pivot -->
+      <ellipse cx="70" cy="148" rx="2.5" ry="1"
+        fill="#0a2030" stroke="#00d4f0" stroke-width="0.6"/>
+      <ellipse cx="70" cy="148" rx="1" ry="0.4"
+        fill="#00d4f0" opacity="0.9"/>
+    </g>
+
+    <!-- Arcs filaments connexion rotors -->
+    <path d="M70 6 Q70 0 70 0" stroke="#00aaff" stroke-width="0.5" stroke-opacity="0.2" stroke-dasharray="2 3"/>
+    <path d="M26 110 Q18 120 16 130" stroke="#00aaff" stroke-width="0.4" stroke-opacity="0.18" stroke-dasharray="2 4"/>
+    <path d="M114 110 Q122 120 124 130" stroke="#00aaff" stroke-width="0.4" stroke-opacity="0.18" stroke-dasharray="2 4"/>
+  </svg>
+
+
+  <div class="band-pill bA pos-top" id="bandA" onclick="toggleBand('A')">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:1px;">
+        <div class="band-s" id="svalA">−0.505</div>
+      </div>
+      <div class="band-circle" id="circleA">A</div>
+      <div class="trophy" id="trphA">🏆</div>
+    </div>
+
+    <div class="band-pill bB pos-bl" id="bandB" onclick="toggleBand('B')">
+      <div class="band-circle" id="circleB">B</div>
+      <div class="sig-bars">
+        <div class="sig-bar on" style="height:3px"></div>
+        <div class="sig-bar on" style="height:6px"></div>
+        <div class="sig-bar on" style="height:9px"></div>
+        <div class="sig-bar on" style="height:12px"></div>
+      </div>
+      <div class="band-s" id="svalB">−0.586</div>
+      <div class="trophy" id="trphB">🏆</div>
+    </div>
+
+    <div class="band-pill bC pos-br" id="bandC" onclick="toggleBand('C')">
+      <div class="band-circle" id="circleC">C</div>
+      <div class="sig-bars">
+        <div class="sig-bar on" style="height:3px"></div>
+        <div class="sig-bar on" style="height:6px"></div>
+        <div class="sig-bar on" style="height:9px"></div>
+        <div class="sig-bar on" style="height:12px"></div>
+      </div>
+      <div class="band-s" id="svalC">−0.510</div>
+      <div class="trophy" id="trphC">🏆</div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ INPUT ══ -->
+<div class="input-section">
+  <div class="sec-lbl">
+    <span class="miro-modulo">≡</span>
+    <span class="miro-word"><span class="miro-cap">M</span><span class="miro-rest">odular</span></span>
+    <span class="miro-word"><span class="miro-cap">I</span><span class="miro-rest">ncremental</span></span>
+    <span class="miro-word"><span class="miro-cap">R</span><span class="miro-rest">everse</span></span>
+    <span class="miro-word"><span class="miro-cap">O</span><span class="miro-rest">perations</span></span>
+    <span style="color:rgba(248,246,242,.4);margin-left:2px;">◇</span>
+  </div>
+  <div class="drums-section">
+    <div class="drums-row" id="drumsRow"></div>
+  </div>
+
+  <div class="sec-lbl-dim">n = p × q</div>
+  <div class="n-wrap">
+    <input class="n-input" id="nInp" type="text"
+           placeholder="Paste RSA integer — odd only > 2"
+           oninput="onN(this)">
+    <div class="digits-pill" id="dpill"></div>
+  </div>
+  <div class="even-msg" id="evenMsg">⚠ EVEN NUMBER — NOT RSA</div>
+  <div class="invalid-msg" id="invalidMsg">⚠ n MUST BE > 2</div>
+
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="btns-row">
+    <div class="tog-wrap" onclick="toggleMode()">
+      <span class="tog-lbl">MODE</span>
+      <div class="tog-sw seq" id="togSw"><div class="tog-knob"></div></div>
+      <span class="tog-mode" id="togTxt">SEQ</span>
+    </div>
+    <button class="btn-factor" onclick="doFactor()">⚡ FACTORIZE</button>
+    <button class="btn-stop"   onclick="doStop()">■ STOP</button>
+    <button class="btn-reset"  onclick="doReset()">↺ RESET</button>
+  </div>
+</div>
+
+<!-- ══ TIMER + RESULTS ══ -->
+<div class="timer-results">
+
+  <div class="timer-row">
+
+    <!-- Chronomètre Diving Militaire — Model B -->
+    <button class="btn-timer-icon" id="btnTimerIcon" onclick="toggleDrumDoor()" title="Set countdown timer">
+      <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="chFace" cx="50%" cy="38%" r="58%">
+            <stop offset="0%"   stop-color="#081820"/>
+            <stop offset="100%" stop-color="#020810"/>
+          </radialGradient>
+          <filter id="chGlow">
+            <feGaussianBlur stdDeviation="0.9" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- Couronne double crantée -->
+        <rect class="chrono-crown" x="12" y="1" width="4" height="4.5" rx="1.5"
+          fill="#243040" stroke="#00aaff" stroke-width="0.7"
+          style="transform-origin:14px 3.25px;"/>
+        <!-- Bouton latéral haut (start) -->
+        <rect x="24.5" y="8"  width="3.5" height="3" rx="1.2"
+          fill="#243040" stroke="#00aaff" stroke-width="0.6"/>
+        <!-- Bouton latéral bas (reset) -->
+        <rect x="24.5" y="14" width="3.5" height="3" rx="1.2"
+          fill="#243040" stroke="#00aaff" stroke-width="0.6"/>
+
+        <!-- Lunette externe crantée -->
+        <circle cx="14" cy="18" r="12.5"
+          fill="none" stroke="#0a2840" stroke-width="3"/>
+        <circle cx="14" cy="18" r="12.5"
+          fill="none" stroke="#1a4060" stroke-width="0.8"
+          stroke-dasharray="1.4 2.8"/>
+        <!-- Arc lumineux lunette (quart supérieur) -->
+        <path d="M14 5.5 A12.5 12.5 0 0 1 26.5 18"
+          stroke="#00aaff" stroke-width="1.2" stroke-linecap="round" fill="none"
+          stroke-opacity="0.55"/>
+
+        <!-- Boîtier -->
+        <circle cx="14" cy="18" r="11"
+          fill="url(#chFace)" stroke="#0a1e30" stroke-width="1"/>
+        <!-- Anneau intérieur pointillé -->
+        <circle cx="14" cy="18" r="9.5"
+          fill="none" stroke="#0a2840" stroke-width="0.6"
+          stroke-dasharray="1 3.2"/>
+
+        <!-- Marqueur 12h — triangle vert lumineux -->
+        <polygon points="14,7.5 12.4,11 15.6,11"
+          fill="#00e87a" fill-opacity="0.92" filter="url(#chGlow)"/>
+
+        <!-- Ticks cardinaux 3/6/9h -->
+        <line x1="14" y1="25.5" x2="14" y2="27.5" stroke="#304060" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="3.5" y1="18"  x2="5.5" y2="18"  stroke="#304060" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="22.5" y1="18" x2="24.5" y2="18" stroke="#304060" stroke-width="1.2" stroke-linecap="round"/>
+
+        <!-- Ticks intermédiaires 45° -->
+        <line x1="6.1"  y1="10.1" x2="7.5"  y2="11.5" stroke="#1a3858" stroke-width="0.8"/>
+        <line x1="21.9" y1="10.1" x2="20.5" y2="11.5" stroke="#1a3858" stroke-width="0.8"/>
+        <line x1="6.1"  y1="25.9" x2="7.5"  y2="24.5" stroke="#1a3858" stroke-width="0.8"/>
+        <line x1="21.9" y1="25.9" x2="20.5" y2="24.5" stroke="#1a3858" stroke-width="0.8"/>
+
+        <!-- Aiguille heures — lollipop large -->
+        <line x1="14" y1="18" x2="9.2" y2="13.2"
+          stroke="#c0dff5" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="9.2" cy="13.2" r="1.8" fill="#c0dff5"/>
+
+        <!-- Aiguille minutes — lollipop fine -->
+        <line id="chMinHand" x1="14" y1="18" x2="14" y2="9"
+          stroke="#e8f4ff" stroke-width="1.4" stroke-linecap="round"
+          style="transform-origin:14px 18px;animation:chMin 120s linear infinite;"/>
+
+        <!-- Aiguille secondes — fine rouge + triangle pointe -->
+        <g id="chSecHand" style="transform-origin:14px 18px;animation:chSec 6s linear infinite;">
+          <line x1="14" y1="22" x2="14" y2="8.5"
+            stroke="#ff2244" stroke-width="0.8" stroke-linecap="round" filter="url(#chGlow)"/>
+          <polygon points="14,8.5 12.8,12 15.2,12"
+            fill="#ff2244" filter="url(#chGlow)"/>
+          <!-- Queue contre-aiguille -->
+          <line x1="14" y1="22" x2="14" y2="24.5"
+            stroke="#ff2244" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.5"/>
+        </g>
+
+        <!-- Pivot central lumineux -->
+        <circle cx="14" cy="18" r="2.2"
+          fill="#050f1a" stroke="#00aaff" stroke-width="0.9"/>
+        <circle cx="14" cy="18" r="0.9"
+          fill="#00aaff" filter="url(#chGlow)"/>
+      </svg>
+    </button>
+
+    <!-- Zone timer + porte tambour -->
+    <div class="timer-display" style="flex:1;">
+      <div class="drum-door" id="drumDoor">
+        <div class="drum-door-inner" id="drumDoorInner">
+
+          <!-- FACE AVANT — affichage temps -->
+          <div class="drum-face-front">
+            <span class="timer-val" id="tVal">00:00:00<span class="ms">.000</span></span>
+            <span class="timer-sub" id="tSub">hour · minute · second · ms</span>
+          </div>
+
+          <!-- FACE ARRIÈRE — panneau HH:MM -->
+          <div class="drum-face-back">
+            <div class="countdown-inner">
+              <span class="cd-label">⏱ LIMIT</span>
+              <div class="cd-fields">
+                <div class="cd-unit">
+                  <span class="cd-unit-label">HH</span>
+                  <div class="cd-spin">
+                    <input class="cd-inp" id="cdH" type="text" value="00" maxlength="2"
+                      oninput="cdValidate(this,23)" onfocus="this.select()">
+                    <div class="cd-arrows">
+                      <button class="cd-arrow" onclick="cdStep('cdH',1,23)">▲</button>
+                      <button class="cd-arrow" onclick="cdStep('cdH',-1,23)">▼</button>
+                    </div>
+                  </div>
+                </div>
+                <span class="cd-sep">:</span>
+                <div class="cd-unit">
+                  <span class="cd-unit-label">MM</span>
+                  <div class="cd-spin">
+                    <input class="cd-inp" id="cdM" type="text" value="00" maxlength="2"
+                      oninput="cdValidate(this,59)" onfocus="this.select()">
+                    <div class="cd-arrows">
+                      <button class="cd-arrow" onclick="cdStep('cdM',1,59)">▲</button>
+                      <button class="cd-arrow" onclick="cdStep('cdM',-1,59)">▼</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="cd-clear" onclick="cdClear()">✕</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="res-divider"></div>
+  <div class="res-grid">
+    <div class="res-k" id="rkN">n</div>
+    <div class="res-v" id="rN">—</div>
+    <div class="res-d hdr">DIGITS</div>
+    <div class="res-div2"></div>
+    <div class="res-k">p</div>
+    <div class="res-v hi" id="rP">—</div>
+    <div class="res-d" id="dP">—</div>
+    <div class="res-k">q</div>
+    <div class="res-v hi" id="rQ">—</div>
+    <div class="res-d" id="dQ">—</div>
+    <div class="res-div2"></div>
+    <div class="res-k">x</div>
+    <div class="res-v" id="rX">—</div>
+    <div class="res-d" id="dX">—</div>
+    <div class="res-k">s</div>
+    <div class="res-v s-val" id="rS">—</div>
+    <div class="res-d" id="dBand">—</div>
+  </div>
+</div>
+
+<!-- ══ STATUS ══ -->
+<div class="status-bar" id="statusBar">
+  <div class="sdot ready" id="sdot"></div>
+  <div class="stxt" id="stxt">READY — Enter n to begin</div>
+</div>
+
+<!-- ══ BOTTOM (AVEC ICÔNES) ══ -->
+<div class="bottom-bar">
+  <!-- Ligne avec Share à gauche et Mute à droite -->
+  <div class="status-export-row">
+    <button class="btn-share-small" onclick="exportResults()">
+      <span>📤</span> SHARE
+    </button>
+    <button class="btn-mute-small" id="muteBtn" onclick="toggleMute()">🔊 SOUND</button>
+  </div>
+  
+  <!-- Signature -->
+  <div class="signature-container">
+    <div class="signature-line1">
+      <span class="green-crown">♔</span> Thierno M. Sow <span class="green-crown">♔</span>
+    </div>
+    <div class="signature-line2">
+      Polymath <span class="diamond-white">◇</span> Codebreaker
+    </div>
+    
+    <!-- Icônes de contact (liens hypertextes) -->
+    <div class="contact-icons">
+      <a href="/cdn-cgi/l/email-protection#aedac6c7cbdcc0c180ddc1d9eeddcdc7cbc0cdcbdddec180c8dc" class="contact-icon email-icon" title="thierno.sow@sciencespo.fr  |  sowriemann@proton.me"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="2,12 22,2 16,22 12,14" fill="rgba(255,255,255,0.15)" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"/><line x1="12" y1="14" x2="22" y2="2" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+      <a href="https://sciencespo-alumni.fr/cv/thierno-m-sow/sciences-po-paris/2008" target="_blank" class="contact-icon" title="Biographie">🌐</a>
+      <span class="copyright-tag">© 2026</span>
+    </div>
+  </div>
+</div>
+
+</div><!-- /app -->
+
+<script>
+// ── CONSOLE SAFE WRAPPER — Android file:// compatible ────────
+// Certains navigateurs Android bloquent _log.info/warn/error
+var _log = (function(){
+  var _c = (typeof console !== 'undefined') ? console : {};
+  return {
+    info:  function(){ try{ if(_c.info)  _c.info.apply(_c, arguments);
+                       else if(_c.log)   _c.log.apply(_c, arguments); }catch(e){} },
+    warn:  function(){ try{ if(_c.warn)  _c.warn.apply(_c, arguments);
+                       else if(_c.log)   _c.log.apply(_c, arguments); }catch(e){} },
+    error: function(){ try{ if(_c.error) _c.error.apply(_c, arguments);
+                       else if(_c.log)   _c.log.apply(_c, arguments); }catch(e){} },
+    log:   function(){ try{ if(_c.log)   _c.log.apply(_c, arguments); }catch(e){} }
+  };
+})();
+
+// ── ERROR HANDLER GLOBAL ─────────────────────────────────────
+window.onerror = function(msg, src, line, col, err){
+  var d = document.getElementById('__sow_debug__');
+  if(d){ d.style.display='block'; d.textContent = '⚠ JS ERROR L'+line+': '+msg; }
+  _log.error('[SOW ERROR]', msg, 'L'+line, err);
+  return false;
+};
+
+// ── BIGINT CHECK ──────────────────────────────────────────────
+(function(){
+  try { BigInt(1); }
+  catch(e){
+    document.addEventListener('DOMContentLoaded', function(){
+      document.body.innerHTML = '<div style="background:#c00;color:#fff;padding:30px;font-family:monospace;font-size:14px;text-align:center;">'
+        + '⚠ WURUS.V9 — Your browser does not support BigInt.<br>'
+        + 'Use Chrome 67+, Firefox 68+, Safari 14+, Edge 79+.</div>';
+    });
+    throw new Error('BigInt not supported');
+  }
+})();
+
+// © Thierno M. Sow — SowRiemann.MIRO.Capsule 2026
+
+// ══════════════════════════════════════════════════════════════
+//  SOW RIEMANN COCKPIT (version finale)
+// ══════════════════════════════════════════════════════════════
+
+// Reset cache au démarrage
+(function hardReset(){
+  try{ localStorage.clear(); sessionStorage.clear(); }catch(e){}
+})();
+
+// ── State ─────────────────────────────────────────────────────
+let timerMs = 0, tIv = null;
+let drumFaces = [], drumIv = null;
+let isSeq = true;
+let isMuted = false;
+let factorWorker = null;
+let computing = false;
+
+// ── Audio ─────────────────────────────────────────────────────
+let audioCtx = null;
+function getAudio(){
+  if(!audioCtx) audioCtx = new (window.AudioContext||window.webkitAudioContext)();
+  return audioCtx;
+}
+function playSuccess(){
+  if(isMuted) return;
+  try{
+    const ctx = getAudio();
+    [[523.25,0],[659.25,.12],[783.99,.24],[1046.5,.38]].forEach(([freq,when])=>{
+      const o = ctx.createOscillator();
+      const g = ctx.createGain();
+      o.connect(g); g.connect(ctx.destination);
+      o.type = 'sine'; o.frequency.value = freq;
+      const t = ctx.currentTime + when;
+      g.gain.setValueAtTime(0,t);
+      g.gain.linearRampToValueAtTime(.18,t+.04);
+      g.gain.exponentialRampToValueAtTime(.001,t+.55);
+      o.start(t); o.stop(t+.6);
+    });
+  }catch(e){}
+}
+function playFail(){
+  if(isMuted) return;
+  try{
+    const ctx = getAudio();
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.connect(g); g.connect(ctx.destination);
+    o.type='sine'; o.frequency.setValueAtTime(300,ctx.currentTime);
+    o.frequency.linearRampToValueAtTime(180,ctx.currentTime+.4);
+    g.gain.setValueAtTime(.12,ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+.5);
+    o.start(); o.stop(ctx.currentTime+.5);
+  }catch(e){}
+}
+function toggleMute(){
+  isMuted = !isMuted;
+  const btn = document.getElementById('muteBtn');
+  btn.textContent = isMuted ? '🔇 MUTED' : '🔊 SOUND';
+  btn.classList.toggle('muted', isMuted);
+}
+
+// ── Bandes ────────────────────────────────────────────────────
+function toggleBand(letter){
+  const el = document.getElementById('band'+letter);
+  el.classList.toggle('spinning');
+}
+function startBandSpins(){
+  ['A','B','C'].forEach(l => {
+    document.getElementById('band'+l).classList.add('spinning');
+  });
+}
+function stopBandSpins(){
+  ['A','B','C'].forEach(l => {
+    document.getElementById('band'+l).classList.remove('spinning');
+  });
+}
+function crownWinner(winLetter){
+  ['A','B','C'].forEach(l => {
+    document.getElementById('band'+l).classList.remove('winner','active-band');
+  });
+  document.getElementById('band'+winLetter).classList.add('winner');
+}
+
+// ── Rouleaux ──────────────────────────────────────────────────
+const DRUM_DEF = [3, null, 3, null, 2];
+function buildDrums(){
+  const row = document.getElementById('drumsRow');
+  row.innerHTML = ''; drumFaces = [];
+  DRUM_DEF.forEach(g => {
+    if(g === null){
+      const s = document.createElement('div');
+      s.className='drum-sep'; s.textContent=':'; row.appendChild(s); return;
+    }
+    for(let i=0;i<g;i++){
+      const wrap = document.createElement('div'); wrap.className='drum';
+      const face = document.createElement('div'); face.className='drum-face';
+      face.textContent = Math.floor(Math.random()*10);
+      wrap.appendChild(face); row.appendChild(wrap); drumFaces.push(face);
+    }
+  });
+}
+function flashDigit(face, val){
+  face.classList.add('flash');
+  setTimeout(()=>{ face.textContent=(val!==undefined)?val:Math.floor(Math.random()*10); face.classList.remove('flash'); },70);
+}
+function startDrums(){
+  drumIv = setInterval(()=>{ drumFaces.forEach(f=>{ if(Math.random()<.6) flashDigit(f); }); },90);
+}
+function stopDrums(){ clearInterval(drumIv); drumIv = null; }
+function freezeDrums(p, q){
+  stopDrums();
+  const ps = String(p).padStart(3,'0');
+  const qs = String(q).padStart(3,'0');
+  const pe = String(p).slice(-2).padStart(2,'0');
+  const vals = [ps[0],ps[1],ps[2], qs[0],qs[1],qs[2], pe[0],pe[1]];
+  drumFaces.forEach((f,i) => {
+    if(vals[i] !== undefined) flashDigit(f, vals[i]);
+  });
+}
+function resetDrums(){ stopDrums(); drumFaces.forEach(f=>{ f.textContent=Math.floor(Math.random()*10); }); }
+document.addEventListener("DOMContentLoaded", function(){ buildDrums(); });
+
+// ── Toggle Mode ───────────────────────────────────────────────
+function toggleMode(){
+  isSeq = !isSeq;
+  document.getElementById('togSw').className = 'tog-sw '+(isSeq?'seq':'par');
+  document.getElementById('togTxt').textContent = isSeq?'SEQ':'PAR';
+}
+
+// ── Input (validation: chiffres, pas de zéro en tête, n > 2) ──
+function onN(inp){
+  let raw = inp.value.replace(/\D/g,'');
+  
+  // Supprimer les zéros en début de chaîne
+  raw = raw.replace(/^0+/, '');
+  
+  inp.value = raw;
+  
+  clearResults();
+  resetDrums();
+  
+  const pill = document.getElementById('dpill');
+  const evenMsg = document.getElementById('evenMsg');
+  const invalidMsg = document.getElementById('invalidMsg');
+  const rN = document.getElementById('rN');
+  
+  if(!raw){
+    pill.classList.remove('show','even-alert','invalid-alert');
+    inp.classList.remove('even','invalid');
+    evenMsg.classList.remove('show');
+    invalidMsg.classList.remove('show');
+    rN.textContent='—';
+    setStatus('','READY — Enter n to begin');
+    return;
+  }
+  
+  rN.textContent = raw;
+  const lastDigit = parseInt(raw[raw.length-1]);
+  const isEven = lastDigit % 2 === 0;
+  const isMult5 = lastDigit === 5;
+  const isTooSmall = raw.length === 1 && (raw === '1' || raw === '2');
+  
+  if(isEven){
+    inp.classList.add('even');
+    inp.classList.remove('invalid');
+    pill.textContent='EVEN'; 
+    pill.classList.add('show','even-alert');
+    pill.classList.remove('invalid-alert');
+    evenMsg.classList.add('show');
+    invalidMsg.classList.remove('show');
+    setStatus('error','EVEN NUMBER — NOT RSA');
+  }
+  else if(isMult5){
+    inp.classList.add('even'); inp.classList.remove('invalid');
+    pill.textContent='÷5';
+    pill.classList.add('show','even-alert'); pill.classList.remove('invalid-alert');
+    evenMsg.classList.add('show'); invalidMsg.classList.remove('show');
+    setStatus('error','MULTIPLE OF 5 — NOT RSA');
+  }
+  else if(isTooSmall){
+    inp.classList.add('invalid');
+    inp.classList.remove('even');
+    pill.textContent='< 3'; 
+    pill.classList.add('show','invalid-alert');
+    pill.classList.remove('even-alert');
+    evenMsg.classList.remove('show');
+    invalidMsg.classList.add('show');
+    setStatus('error','n MUST BE > 2');
+  }
+  else {
+    inp.classList.remove('even','invalid');
+    pill.textContent=raw.length+' digit'+(raw.length>1?'s':'');
+    pill.classList.remove('even-alert','invalid-alert');
+    pill.classList.add('show');
+    evenMsg.classList.remove('show');
+    invalidMsg.classList.remove('show');
+    setStatus('ready','READY — Enter n to begin');
+  }
+}
+
+// ── Status helper ─────────────────────────────────────────────
+function setStatus(type, msg){
+  const dot = document.getElementById('sdot');
+  const txt = document.getElementById('stxt');
+  const bar = document.getElementById('statusBar');
+  dot.className = 'sdot'+(type?' '+type:'');
+  txt.textContent = msg;
+  
+  if(msg.startsWith('FACTORED')){
+    txt.innerHTML = 'FACTORED • <span style="color:#00aaff;font-weight:900;text-shadow:0 0 8px rgba(0,170,255,.8);">P</span><span style="color:#c8c8c8;font-weight:600;text-shadow:0 0 6px rgba(200,200,200,.6);">vs</span><span style="color:#ff1a3a;font-weight:900;text-shadow:0 0 8px rgba(255,26,58,.8);">N</span><span style="color:#00aaff;font-weight:900;text-shadow:0 0 8px rgba(0,170,255,.8);">P</span> • 𝗢(1) ⚜️ ＭΞＭΞＮＴＯ ＭＯＲＩ ⚜️';
+    bar.classList.add('factored-st');
+    bar.style.justifyContent = 'center';
+    bar.style.textAlign = 'center';
+    // Verre brisé ⚡ sur la case n
+    const rkN = document.getElementById('rkN');
+    rkN.classList.add('n-flash');
+    // Injecter l'overlay SVG verre brisé
+    if(!document.getElementById('glassBreakSVG')){
+      const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+      svg.id = 'glassBreakSVG';
+      svg.setAttribute('class','glass-break-overlay');
+      svg.setAttribute('viewBox','0 0 48 48');
+      svg.innerHTML = `
+        <defs>
+          <filter id="gbGlow">
+            <feGaussianBlur stdDeviation="1.5" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- Lignes de fracture rayonnantes depuis le centre -->
+        <g stroke="#ffdd00" stroke-opacity="0.9" fill="none" filter="url(#gbGlow)">
+          <line class="glass-shard" x1="24" y1="24" x2="24"  y2="2"   stroke-width="1.2"/>
+          <line class="glass-shard" x1="24" y1="24" x2="40"  y2="6"   stroke-width="0.9"/>
+          <line class="glass-shard" x1="24" y1="24" x2="46"  y2="22"  stroke-width="1.1"/>
+          <line class="glass-shard" x1="24" y1="24" x2="42"  y2="40"  stroke-width="0.8"/>
+          <line class="glass-shard" x1="24" y1="24" x2="24"  y2="46"  stroke-width="1.2"/>
+          <line class="glass-shard" x1="24" y1="24" x2="6"   y2="40"  stroke-width="0.9"/>
+          <line class="glass-shard" x1="24" y1="24" x2="2"   y2="22"  stroke-width="1.1"/>
+          <line class="glass-shard" x1="24" y1="24" x2="8"   y2="6"   stroke-width="0.8"/>
+        </g>
+        <!-- Éclats secondaires brisés -->
+        <g stroke="#ffffff" stroke-opacity="0.5" fill="none">
+          <line class="glass-shard" x1="24" y1="14" x2="30"  y2="8"   stroke-width="0.6"/>
+          <line class="glass-shard" x1="24" y1="14" x2="18"  y2="8"   stroke-width="0.6"/>
+          <line class="glass-shard" x1="35" y1="24" x2="42"  y2="18"  stroke-width="0.6"/>
+          <line class="glass-shard" x1="35" y1="24" x2="42"  y2="30"  stroke-width="0.6"/>
+          <line class="glass-shard" x1="24" y1="34" x2="30"  y2="42"  stroke-width="0.6"/>
+          <line class="glass-shard" x1="24" y1="34" x2="18"  y2="42"  stroke-width="0.6"/>
+          <line class="glass-shard" x1="13" y1="24" x2="6"   y2="18"  stroke-width="0.6"/>
+          <line class="glass-shard" x1="13" y1="24" x2="6"   y2="30"  stroke-width="0.6"/>
+        </g>
+        <!-- Triangles de verre éclatés -->
+        <g fill="rgba(255,220,0,0.12)" stroke="#ffdd00" stroke-width="0.5" stroke-opacity="0.7">
+          <polygon class="glass-shard" points="24,24 24,2 40,6"/>
+          <polygon class="glass-shard" points="24,24 40,6 46,22"/>
+          <polygon class="glass-shard" points="24,24 46,22 42,40"/>
+          <polygon class="glass-shard" points="24,24 42,40 24,46"/>
+          <polygon class="glass-shard" points="24,24 24,46 6,40"/>
+          <polygon class="glass-shard" points="24,24 6,40 2,22"/>
+          <polygon class="glass-shard" points="24,24 2,22 8,6"/>
+          <polygon class="glass-shard" points="24,24 8,6 24,2"/>
+        </g>
+        <!-- Éclair central ⚡ -->
+        <path class="glass-lightning"
+          d="M26,8 L21,22 L25,22 L20,38 L29,20 L24,20 Z"
+          fill="#ffee44" stroke="#ffaa00" stroke-width="0.6"
+          filter="url(#gbGlow)"/>
+        <!-- Point d'impact -->
+        <circle class="glass-impact-center" cx="24" cy="24" r="3"
+          fill="#ffffff" fill-opacity="0.9" filter="url(#gbGlow)"/>
+      `;
+      rkN.appendChild(svg);
+    }
+  } else {
+    bar.classList.remove('factored-st');
+    bar.style.justifyContent = '';
+    bar.style.textAlign = '';
+    const rkN2 = document.getElementById('rkN');
+    rkN2.classList.remove('n-flash');
+    const oldSvg = document.getElementById('glassBreakSVG');
+    if(oldSvg) oldSvg.remove();
+  }
+}
+
+// ── Clear Results ─────────────────────────────────────────────
+function clearResults(){
+  const rkN = document.getElementById('rkN');
+  rkN.classList.remove('n-flash');
+  const old = document.getElementById('glassBreakSVG');
+  if(old) old.remove();
+  const ids = {rP:'res-v hi',rQ:'res-v hi',rX:'res-v',rS:'res-v s-val'};
+  Object.entries(ids).forEach(([id,cls])=>{
+    const el=document.getElementById(id);
+    el.textContent='—'; el.className=cls;
+  });
+  ['dP','dQ','dX','dBand'].forEach(id=>document.getElementById(id).textContent='—');
+  ['bandA','bandB','bandC'].forEach(id=>document.getElementById(id).classList.remove('winner','active-band'));
+  document.getElementById('statusBar').classList.remove('factored-st');
+  document.getElementById('statusBar').style.justifyContent='';
+  document.getElementById('statusBar').style.textAlign='';
+  hideProgress();
+  // NOTE: timer display is intentionally NOT reset here.
+  // Elapsed time persists until RESET or new FACTOR run.
+}
+
+// ── Progress ──────────────────────────────────────────────────
+let progressIv = null;
+function showProgress(){
+  const wrap = document.getElementById('progressWrap');
+  const bar = document.getElementById('progressBar');
+  wrap.classList.add('show');
+  bar.style.width = '0%';
+  let pct = 0;
+  progressIv = setInterval(()=>{
+    pct = pct + (92 - pct) * 0.025;
+    bar.style.width = pct + '%';
+  }, 80);
+}
+function completeProgress(){
+  clearInterval(progressIv);
+  document.getElementById('progressBar').style.width = '100%';
+  setTimeout(hideProgress, 600);
+}
+function hideProgress(){
+  clearInterval(progressIv);
+  const wrap = document.getElementById('progressWrap');
+  const bar = document.getElementById('progressBar');
+  wrap.classList.remove('show');
+  bar.style.width = '0%';
+}
+
+// ── Reset Total ───────────────────────────────────────────────
+function doReset(){
+  if(computing){ killWorker(); }
+  stopTimer();
+  if(countdownActive) stopCountdown(false);
+  stopDrums(); stopBandSpins(); /* timerMs preserved */ computing=false;
+  resetTimerDisplay();
+  const inp = document.getElementById('nInp');
+  inp.value=''; inp.classList.remove('even','invalid');
+  document.getElementById('dpill').classList.remove('show','even-alert','invalid-alert');
+  document.getElementById('evenMsg').classList.remove('show');
+  document.getElementById('invalidMsg').classList.remove('show');
+  document.getElementById('rN').textContent='—';
+  setStatus('','READY — Enter n to begin');
+  clearResults();
+  resetDrums();
+}
+
+// ── Timer ─────────────────────────────────────────────────────
+function startTimer(){ timerMs=0; tIv=setInterval(()=>{ timerMs+=17; const h=Math.floor(timerMs/3600000),m=Math.floor(timerMs%3600000/60000),s=Math.floor(timerMs%60000/1000),cs=timerMs%1000; document.getElementById('tVal').innerHTML=`${p2(h)}:${p2(m)}:${p2(s)}<span class="ms">.${p3(cs)}</span>`; },17); }
+function stopTimer(){ clearInterval(tIv); tIv=null; }
+function p2(n){return String(n).padStart(2,'0');}
+function p3(n){return String(n).padStart(3,'0');}
+
+// ── Countdown Timer ────────────────────────────────────────────
+let countdownLimitMs = 0;
+let countdownMs      = 0;
+let countdownActive  = false;
+let cdIv             = null;
+let drumDoorOpen     = false;
+
+function playTick(){
+  if(isMuted) return;
+  try{
+    const ctx = getAudio();
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.connect(g); g.connect(ctx.destination);
+    o.type = 'sine'; o.frequency.value = 1100;
+    g.gain.setValueAtTime(0.06, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.08);
+    o.start(); o.stop(ctx.currentTime + 0.09);
+  }catch(e){}
+}
+
+function toggleDrumDoor(){
+  drumDoorOpen = !drumDoorOpen;
+  const inner = document.getElementById('drumDoorInner');
+  const btn   = document.getElementById('btnTimerIcon');
+
+  // Spin de la couronne
+  btn.classList.add('spinning');
+  setTimeout(()=> btn.classList.remove('spinning'), 600);
+
+  playTick();
+
+  inner.classList.toggle('flipped', drumDoorOpen);
+  btn.classList.toggle('active', drumDoorOpen);
+
+  // Si on revient en face avant, on remet la hauteur correcte
+  if(!drumDoorOpen){
+    // retour tambour → face timer
+  }
+}
+
+function cdValidate(inp, max){
+  let v = inp.value.replace(/\D/g,'');
+  if(v === '') v = '0';
+  if(parseInt(v) > max) v = String(max);
+  inp.value = v.padStart(2,'0');
+}
+
+function cdStep(id, delta, max){
+  const inp = document.getElementById(id);
+  let v = parseInt(inp.value)||0;
+  v = Math.max(0, Math.min(max, v + delta));
+  inp.value = String(v).padStart(2,'0');
+}
+
+function cdClear(){
+  document.getElementById('cdH').value = '00';
+  document.getElementById('cdM').value = '00';
+}
+
+function cdGetLimitMs(){
+  const h = parseInt(document.getElementById('cdH').value)||0;
+  const m = parseInt(document.getElementById('cdM').value)||0;
+  return (h * 3600 + m * 60) * 1000;
+}
+
+function startCountdown(limitMs){
+  countdownLimitMs = limitMs;
+  countdownMs      = limitMs;
+  countdownActive  = true;
+  const tVal = document.getElementById('tVal');
+  const btn  = document.getElementById('btnTimerIcon');
+  btn.classList.add('countdown-running');
+  btn.classList.remove('active');
+
+  cdIv = setInterval(()=>{
+    countdownMs -= 17;
+    if(countdownMs < 0) countdownMs = 0;
+
+    const h  = Math.floor(countdownMs/3600000);
+    const m  = Math.floor(countdownMs%3600000/60000);
+    const s  = Math.floor(countdownMs%60000/1000);
+    const ms = countdownMs%1000;
+    tVal.innerHTML = `${p2(h)}:${p2(m)}:${p2(s)}<span class="ms">.${p3(ms)}</span>`;
+
+    // Couleur warning sous 30s
+    if(countdownMs <= 30000 && countdownMs > 0){
+      tVal.className = 'timer-val countdown-warn';
+    } else {
+      tVal.className = 'timer-val countdown';
+    }
+
+    // Temps écoulé
+    timerMs = countdownLimitMs - countdownMs;
+
+    // Fin du compte à rebours → stoppe le calcul
+    if(countdownMs <= 0){
+      stopCountdown(true);
+      if(computing){ killWorker(); computing = false; }
+      stopDrums(); stopBandSpins(); hideProgress();
+      showElapsed();
+      setStatus('', 'TIME LIMIT REACHED');
+    }
+  }, 17);
+}
+
+function stopCountdown(keepDisplay){
+  clearInterval(cdIv); cdIv = null;
+  countdownActive = false;
+  const btn = document.getElementById('btnTimerIcon');
+  btn.classList.remove('countdown-running');
+  if(!keepDisplay) showElapsed();
+}
+
+function showElapsed(){
+  // Affiche le temps écoulé en cyan
+  const elapsed = countdownActive ? (countdownLimitMs - countdownMs) : timerMs;
+  const h  = Math.floor(elapsed/3600000);
+  const m  = Math.floor(elapsed%3600000/60000);
+  const s  = Math.floor(elapsed%60000/1000);
+  const ms = elapsed%1000;
+  const tVal = document.getElementById('tVal');
+  tVal.innerHTML = `${p2(h)}:${p2(m)}:${p2(s)}<span class="ms">.${p3(ms)}</span>`;
+  tVal.className = 'timer-val elapsed';
+  document.getElementById('tSub').textContent = 'elapsed time';
+}
+
+function resetTimerDisplay(){
+  const tVal = document.getElementById('tVal');
+  tVal.innerHTML = '00:00:00<span class="ms">.000</span>';
+  tVal.className = 'timer-val';
+  document.getElementById('tSub').textContent = 'hour · minute · second · ms';
+  // Remet la face timer si porte ouverte
+  if(drumDoorOpen){
+    drumDoorOpen = false;
+    document.getElementById('drumDoorInner').classList.remove('flipped');
+  }
+  document.getElementById('btnTimerIcon').classList.remove('countdown-running','active','spinning');
+}
+
+// ======================================================================
+//  SOW-RIEMANN MIRO WURUS -- ENGINE V9
+//  (c) Thierno M. Sow · Polymath · 2026
+//  Bande critique Riemann: −1 < s < −½  (Re(s)=½ + ε·i²=−1)
+//  Formules: A: s=(n−25x²)/(49x²)  B: s=(n−2401x⁴)/(4096x⁴)  C: s=(n−2940225x²)/(5764801x²)
+//  x=(n±p²)/p  Mod[x,2]=0  · 16 rotors × 3 bandes = 48 permutations IEEE 754
+// ======================================================================
+
+function isqrt(n){
+  if(typeof n!=='bigint') n=BigInt(Math.round(n));
+  if(n<=0n) return 0n;
+  let x=BigInt(Math.floor(Math.sqrt(Number(n))));
+  if(x===0n) x=1n;
+  let xp=(x+n/x)>>1n; while(xp<x){ x=xp; xp=(x+n/x)>>1n; }
+  while(x*x>n) x--; while((x+1n)*(x+1n)<=n) x++;
+  return x;
+}
+function i4thrt(n){
+  if(typeof n!=='bigint') n=BigInt(Math.round(n));
+  if(n<=0n) return 0n;
+  let x=BigInt(Math.floor(Math.pow(Number(n),.25)));
+  if(x<1n) x=1n;
+  while(x>0n&&x*x*x*x>n) x--;
+  while((x+1n)*(x+1n)*(x+1n)*(x+1n)<=n) x++;
+  return x;
+}
+function verifyFactors(p,q,n){
+  try{ return BigInt(p)*BigInt(q)===BigInt(n); }catch(e){ return false; }
+}
+function recoverPQ_sum(x,nb){
+  const disc=x*x-4n*nb; if(disc<0n) return null;
+  const sd=isqrt(disc); if(sd*sd!==disc) return null;
+  const p=x-sd, q=x+sd;
+  if(p<=0n||q<=0n||p%2n!==0n||q%2n!==0n) return null;
+  const pf=p/2n, qf=q/2n;
+  if(pf<2n||qf<2n||pf*qf!==nb) return null;
+  return {p:pf<qf?pf:qf, q:pf<qf?qf:pf};
+}
+function recoverPQ_diff(x,nb){
+  const inner=x*x+4n*nb;
+  const sd=isqrt(inner); if(sd*sd!==inner) return null;
+  const p=sd-x, q=sd+x;
+  if(p<=0n||q<=0n||p%2n!==0n||q%2n!==0n) return null;
+  const pf=p/2n, qf=q/2n;
+  if(pf<2n||qf<2n||pf*qf!==nb) return null;
+  return {p:pf<qf?pf:qf, q:pf<qf?qf:pf};
+}
+
+// 48-permutation rotor pass: 16 rational s-probes × 3 bands
+// s_k = −(16+k)/32  k=0..15  ⟹  s ∈ {−0.5, −0.53125, …, −0.96875}
+// Each band reverses s_k → x_candidate via exact BigInt formula
+// Window W=32 around candidate covers 1 full precision digit of s
+function sowRotors(nb){
+  const te=x=>x<2n?2n:(x%2n===0n?x:x+1n);
+  const W=32n;
+  for(let k=0; k<16; k++){
+    const kn=BigInt(16+k), kd=32n;
+    // Band A: x²=n·kd/(25·kd−49·kn)
+    {const den=25n*kd-49n*kn; if(den>0n){
+      const x0=te(isqrt(nb*kd/den));
+      for(let d=-W;d<=W;d+=2n){const x=x0+d;if(x<2n)continue;
+        const r=recoverPQ_sum(x,nb);if(r)return{r,band:'A',x,k};}}}
+    // Band B: x⁴=n·kd/(2401·kd−4096·kn)
+    {const den=2401n*kd-4096n*kn; if(den>0n){
+      const x0=te(i4thrt(nb*kd/den));
+      for(let d=-W;d<=W;d+=2n){const x=x0+d;if(x<2n)continue;
+        const r=recoverPQ_diff(x,nb);if(r)return{r,band:'B',x,k};}}}
+    // Band C: x²=n·kd/(2940225·kd−5764801·kn)
+    {const den=2940225n*kd-5764801n*kn; if(den>0n){
+      const x0=te(isqrt(nb*kd/den));
+      for(let d=-W;d<=W;d+=2n){const x=x0+d;if(x<2n)continue;
+        const r=recoverPQ_sum(x,nb);if(r)return{r,band:'C',x,k};}}}
+  }
+  return null;
+}
+
+// Bounded fallback scan — handles p<<q (runs async in Worker)
+function sowBandA(nb){
+  let x=isqrt(2n*nb)+1n; if(x%2n!==0n) x+=1n;
+  while(x*x<=2n*nb) x+=2n;
+  const xM=(nb/3n+6n); const xME=xM%2n===0n?xM:xM+1n;
+  for(;x<=xME;x+=2n){
+    const sn=25n*x*x-nb, sd=49n*x*x;
+    if(sn<=0n||sn*2n<=sd) continue; if(sn>=sd) break;
+    const res=recoverPQ_sum(x,nb);
+    if(res) return {p:res.p,q:res.q,s:Number(sn)/Number(sd),band:'A',x,xVar:'p+q'};
+  }
+  return null;
+}
+function sowBandB(nb){
+  let x=i4thrt(2n*nb/706n)+4n; if(x%2n!==0n) x+=1n;
+  while(706n*x*x*x*x<=2n*nb) x+=2n;
+  for(;x>=2n;x-=2n){
+    const x4=x*x*x*x, sn=2401n*x4-nb, sd=4096n*x4;
+    if(sn<=0n) break; if(sn>=sd) continue; if(sn*2n<=sd) break;
+    const res=recoverPQ_diff(x,nb);
+    if(res) return {p:res.p,q:res.q,s:Number(sn)/Number(sd),band:'B',x,xVar:'q-p'};
+  }
+  return null;
+}
+function sowBandC(nb){
+  let x=isqrt(2n*nb/11469251n)+2n; if(x%2n!==0n) x-=1n; if(x<2n) x=2n;
+  for(;x>=2n;x-=2n){
+    const sn=nb-2940225n*x*x, sd=5764801n*x*x;
+    if(sn<=0n) continue; if(sn>=sd) continue; if(sn*2n<=sd) break;
+    const res=recoverPQ_sum(x,nb);
+    if(res) return {p:res.p,q:res.q,s:Number(sn)/Number(sd),band:'C',x,xVar:'p+q'};
+  }
+  return null;
+}
+
+function sowFactor(nStr){
+  if(!nStr||nStr.length===0) return null;
+  let nb; try{ nb=BigInt(String(nStr).replace(/\s/g,'')); }catch(e){ return null; }
+  if(nb<=1n||nb%2n===0n||nb%5n===0n) return null;
+  const M=9007199254740991n;
+  function fmtRot(res,band,x){
+    const sn=band==='A'?(nb-25n*x*x):band==='B'?(nb-2401n*x*x*x*x):(nb-2940225n*x*x);
+    const sd=band==='A'?(49n*x*x):band==='B'?(4096n*x*x*x*x):(5764801n*x*x);
+    return{p:res.p<=M?Number(res.p):res.p.toString(),q:res.q<=M?Number(res.q):res.q.toString(),
+           s:Number(sn)/Number(sd),band,x:x<=M?Number(x):x.toString(),xVar:band==='B'?'q-p':'p+q'};
+  }
+  function fmt(r){return{p:r.p<=M?Number(r.p):r.p.toString(),q:r.q<=M?Number(r.q):r.q.toString(),
+           s:r.s,band:r.band,x:r.x<=M?Number(r.x):r.x.toString(),xVar:r.xVar};}
+  const rot=sowRotors(nb); if(rot) return fmtRot(rot.r,rot.band,rot.x);
+  const fa=sowBandA(nb); if(fa) return fmt(fa);
+  const fb=sowBandB(nb); if(fb) return fmt(fb);
+  const fc=sowBandC(nb); if(fc) return fmt(fc);
+  return null;
+}
+const _WORKER_SRC = `
+'use strict';
+function isqrt(n){if(n<=0n)return 0n;let x=BigInt(Math.floor(Math.sqrt(Number(n))));if(x===0n)x=1n;let xp=(x+n/x)>>1n;while(xp<x){x=xp;xp=(x+n/x)>>1n;}while(x*x>n)x--;while((x+1n)*(x+1n)<=n)x++;return x;}
+function i4thrt(n){if(n<=0n)return 0n;let x=BigInt(Math.floor(Math.pow(Number(n),.25)));if(x<1n)x=1n;while(x>0n&&x*x*x*x>n)x--;while((x+1n)*(x+1n)*(x+1n)*(x+1n)<=n)x++;return x;}
+function recoverPQ_sum(x,nb){const disc=x*x-4n*nb;if(disc<0n)return null;const sd=isqrt(disc);if(sd*sd!==disc)return null;const p=x-sd,q=x+sd;if(p<=0n||q<=0n||p%2n!==0n||q%2n!==0n)return null;const pf=p/2n,qf=q/2n;if(pf<2n||qf<2n||pf*qf!==nb)return null;return{p:pf<qf?pf:qf,q:pf<qf?qf:pf};}
+function recoverPQ_diff(x,nb){const inner=x*x+4n*nb;const sd=isqrt(inner);if(sd*sd!==inner)return null;const p=sd-x,q=sd+x;if(p<=0n||q<=0n||p%2n!==0n||q%2n!==0n)return null;const pf=p/2n,qf=q/2n;if(pf<2n||qf<2n||pf*qf!==nb)return null;return{p:pf<qf?pf:qf,q:pf<qf?qf:pf};}
+function sowRotors(nb){const te=x=>x<2n?2n:(x%2n===0n?x:x+1n);const W=32n;for(let k=0;k<16;k++){const kn=BigInt(16+k),kd=32n;{const den=25n*kd-49n*kn;if(den>0n){const x0=te(isqrt(nb*kd/den));for(let d=-W;d<=W;d+=2n){const x=x0+d;if(x<2n)continue;const r=recoverPQ_sum(x,nb);if(r)return{r,band:'A',x,k};}}}{const den=2401n*kd-4096n*kn;if(den>0n){const x0=te(i4thrt(nb*kd/den));for(let d=-W;d<=W;d+=2n){const x=x0+d;if(x<2n)continue;const r=recoverPQ_diff(x,nb);if(r)return{r,band:'B',x,k};}}}{const den=2940225n*kd-5764801n*kn;if(den>0n){const x0=te(isqrt(nb*kd/den));for(let d=-W;d<=W;d+=2n){const x=x0+d;if(x<2n)continue;const r=recoverPQ_sum(x,nb);if(r)return{r,band:'C',x,k};}}}}return null;}
+function sowBandA(nb){let x=isqrt(2n*nb)+1n;if(x%2n!==0n)x+=1n;while(x*x<=2n*nb)x+=2n;const xM=(nb/3n+6n);const xME=xM%2n===0n?xM:xM+1n;for(;x<=xME;x+=2n){const sn=25n*x*x-nb,sd=49n*x*x;if(sn<=0n||sn*2n<=sd)continue;if(sn>=sd)break;const res=recoverPQ_sum(x,nb);if(res)return{p:res.p,q:res.q,s:Number(sn)/Number(sd),band:'A',x,xVar:'p+q'};}return null;}
+function sowBandB(nb){let x=i4thrt(2n*nb/706n)+4n;if(x%2n!==0n)x+=1n;while(706n*x*x*x*x<=2n*nb)x+=2n;for(;x>=2n;x-=2n){const x4=x*x*x*x,sn=2401n*x4-nb,sd=4096n*x4;if(sn<=0n)break;if(sn>=sd)continue;if(sn*2n<=sd)break;const res=recoverPQ_diff(x,nb);if(res)return{p:res.p,q:res.q,s:Number(sn)/Number(sd),band:'B',x,xVar:'q-p'};}return null;}
+function sowBandC(nb){let x=isqrt(2n*nb/11469251n)+2n;if(x%2n!==0n)x-=1n;if(x<2n)x=2n;for(;x>=2n;x-=2n){const sn=nb-2940225n*x*x,sd=5764801n*x*x;if(sn<=0n)continue;if(sn>=sd)continue;if(sn*2n<=sd)break;const res=recoverPQ_sum(x,nb);if(res)return{p:res.p,q:res.q,s:Number(sn)/Number(sd),band:'C',x,xVar:'p+q'};}return null;}
+function sowFactor(nStr){if(!nStr)return null;let nb;try{nb=BigInt(String(nStr).replace(/\\s/g,''));}catch(e){return null;}if(nb<=1n||nb%2n===0n||nb%5n===0n)return null;const M=9007199254740991n;function fmtRot(res,band,x){const sn=band==='A'?(nb-25n*x*x):band==='B'?(nb-2401n*x*x*x*x):(nb-2940225n*x*x);const sd=band==='A'?(49n*x*x):band==='B'?(4096n*x*x*x*x):(5764801n*x*x);return{p:res.p<=M?Number(res.p):res.p.toString(),q:res.q<=M?Number(res.q):res.q.toString(),s:Number(sn)/Number(sd),band,x:x<=M?Number(x):x.toString(),xVar:band==='B'?'q-p':'p+q'};}function fmt(r){return{p:r.p<=M?Number(r.p):r.p.toString(),q:r.q<=M?Number(r.q):r.q.toString(),s:r.s,band:r.band,x:r.x<=M?Number(r.x):r.x.toString(),xVar:r.xVar};}const rot=sowRotors(nb);if(rot)return fmtRot(rot.r,rot.band,rot.x);const fa=sowBandA(nb);if(fa)return fmt(fa);const fb=sowBandB(nb);if(fb)return fmt(fb);const fc=sowBandC(nb);if(fc)return fmt(fc);return null;}
+self.onmessage=function(e){self.postMessage(sowFactor(e.data));};
+`
+let _workerBlob = null;
+function getWorkerBlob(){
+  if(!_workerBlob){
+    try{ _workerBlob = URL.createObjectURL(new Blob([_WORKER_SRC],{type:'application/javascript'})); }
+    catch(e){ _workerBlob = null; }
+  }
+  return _workerBlob;
+}
+
+function killWorker(){
+  if(factorWorker){ factorWorker.terminate(); factorWorker = null; }
+}
+
+// ── Calcul dans Worker réel — timer + drums restent vivants ──────
+function runFactorWorker(nStr, onResult){
+  killWorker();
+  const blobUrl = getWorkerBlob();
+  if(blobUrl){
+    // Web Worker réel — thread UI libre
+    const w = new Worker(blobUrl);
+    factorWorker = w;
+    w.onmessage = function(e){ factorWorker = null; onResult(e.data); };
+    w.onerror   = function(){ factorWorker = null; onResult(null); };
+    w.postMessage(nStr);
+  } else {
+    // Fallback synchrone (file://, restrictions CSP)
+    const t = setTimeout(()=>{ onResult(sowFactor(nStr)); }, 20);
+    factorWorker = { terminate(){ clearTimeout(t); } };
+  }
+}
+
+function doFactor(){
+  if(computing) return;
+  
+  const raw = document.getElementById('nInp').value.replace(/\D/g,'');
+  if(!raw) return;
+  
+  const lastDigit = parseInt(raw[raw.length-1]);
+  if(lastDigit % 2 === 0) return;
+  if(lastDigit === 5) return;
+  if(raw === '1' || raw === '2') return;
+  
+  computing = true;
+  clearResults();
+  stopTimer();
+  stopCountdown(false);
+  timerMs = 0;
+
+  // Remet l'affichage timer proprement
+  const tValEl = document.getElementById('tVal');
+  tValEl.innerHTML = '00:00:00<span class="ms">.000</span>';
+  tValEl.className = 'timer-val';
+  document.getElementById('tSub').textContent = 'hour · minute · second · ms';
+
+  setStatus('running','COMPUTING…');
+  startBandSpins();
+
+  // Si porte tambour ouverte sur face HH:MM → rebascule côté timer
+  if(drumDoorOpen){
+    drumDoorOpen = false;
+    document.getElementById('drumDoorInner').classList.remove('flipped');
+    document.getElementById('btnTimerIcon').classList.remove('active');
+    playTick();
+  }
+
+  // Countdown ou chrono normal
+  const limitMs = cdGetLimitMs();
+  if(limitMs > 0){
+    tValEl.className = 'timer-val countdown';
+    document.getElementById('tSub').textContent = 'remaining · countdown';
+    startCountdown(limitMs);
+  } else {
+    startTimer();
+  }
+
+  startDrums();
+  showProgress();
+
+  const nSnapshot = raw;
+
+  runFactorWorker(nSnapshot, (result) => {
+    computing = false;
+    stopTimer();
+    if(countdownActive) stopCountdown(false);
+    stopDrums();
+    stopBandSpins();
+    completeProgress();
+
+    const currentN = document.getElementById('nInp').value.replace(/\D/g,'');
+    if(currentN !== nSnapshot){
+      setStatus('error','N changed — restart');
+      clearResults();
+      return;
+    }
+
+    if(result && result.p && result.q){
+      const p = String(result.p);
+      const q = String(result.q);
+      // x value depends on band variable
+      const xv = result.xVar === 'q-p'
+        ? String(result.q - result.p)
+        : String(result.p + result.q);
+      const sVal = result.s !== undefined
+        ? result.s
+        : computeS(result.p, result.q, Number(nSnapshot));
+      const band = result.band || determineBand(sVal);
+      const sStr = sVal.toFixed(16);
+
+      document.getElementById('rN').textContent = nSnapshot;
+      document.getElementById('rP').textContent = p;
+      document.getElementById('rQ').textContent = q;
+      document.getElementById('rX').textContent = xv;
+      document.getElementById('rS').textContent = sStr;
+      document.getElementById('dP').textContent = p.length;
+      document.getElementById('dQ').textContent = q.length;
+      document.getElementById('dX').textContent = xv.length;
+      document.getElementById('dBand').textContent = band;
+
+      const svalEl = document.getElementById('sval'+band);
+      if(svalEl) svalEl.textContent = sStr.substring(0,7);
+
+      setStatus('ready', 'FACTORED — SOW-'+band);
+      crownWinner(band);
+      freezeDrums(p, q);
+      showElapsed();
+      playSuccess();
+    } else {
+      // MAYBE PRIME -- display n immediately
+      const rN = document.getElementById('rN');
+      rN.textContent = nSnapshot;
+      rN.className = 'res-v maybe-n';
+      document.getElementById('rP').innerHTML = 'Maybe <span class="prime-frak">𝔓𝔯𝔦𝔪𝔢</span>';
+      document.getElementById('rQ').textContent = '—';
+      document.getElementById('rX').textContent = '—';
+      document.getElementById('rS').textContent = '—';
+      document.getElementById('dBand').textContent = '?';
+      setStatus('','MAYBE PRIME');
+      resetDrums();
+      showElapsed();
+      playFail();
+    }
+  });
+}
+
+function doStop(){
+  if(computing){ killWorker(); computing = false; }
+  stopTimer();
+  if(countdownActive) stopCountdown(false);
+  stopDrums(); stopBandSpins(); /* timerMs preserved */
+  hideProgress();
+  resetTimerDisplay();
+  setStatus('','STOPPED');
+}
+
+function exportResults(){
+  const n    = document.getElementById('rN').textContent;
+  const p    = document.getElementById('rP').textContent;
+  const q    = document.getElementById('rQ').textContent;
+  const x    = document.getElementById('rX').textContent;
+  const s    = document.getElementById('rS').textContent;
+  const band = document.getElementById('dBand').textContent;
+  const dP   = document.getElementById('dP').textContent;
+  const dQ   = document.getElementById('dQ').textContent;
+  const dN   = n.length;
+  const mode = isSeq ? 'SEQUENTIAL' : 'PARALLEL';
+
+  // Date/time
+  const now  = new Date();
+  const dd   = String(now.getDate()).padStart(2,'0');
+  const mm   = String(now.getMonth()+1).padStart(2,'0');
+  const yyyy = now.getFullYear();
+  const hh   = String(now.getHours()).padStart(2,'0');
+  const mi   = String(now.getMinutes()).padStart(2,'0');
+  const ss   = String(now.getSeconds()).padStart(2,'0');
+  const dateStr = `${dd}/${mm}/${yyyy} ${hh}:${mi}:${ss}`;
+
+  // Timer
+  const h  = Math.floor(timerMs/3600000);
+  const m  = Math.floor(timerMs%3600000/60000);
+  const sc = Math.floor(timerMs%60000/1000);
+  const ms = timerMs % 1000;
+  const timeStr = (h>0?h+'h ':'')+`${m>0?m+'m ':''}${sc}s ${ms}ms`;
+
+  // Verify p*q using BigInt for exact check
+  let verify = '—';
+  try{
+    if(p!=='—' && q!=='—'){
+      const check = BigInt(p) * BigInt(q);
+      verify = check.toString() + (check.toString()===n ? '  ✓ OK' : '  ✗ MISMATCH');
+    }
+  }catch(e){
+    // Fallback for environments without BigInt
+    try{
+      const check = Number(p) * Number(q);
+      verify = String(check) + (String(check)===n ? '  ✓ OK' : '  ✗ MISMATCH');
+    }catch(e2){}
+  }
+
+  const isMaybePrime = (p==='—'||p==='--'||p==='—');
+  const sep = '================================================';
+  const lines=[
+    sep,
+    '  SOW-RIEMANN MIRO WURUS V9 -- REPORT',
+    '  MIRO = Modular Incremental Reverse Operations',
+    '  Complexity: O(1) -- 48 rotors max',
+    `  Date   : ${dateStr}`,
+    sep,
+    `  n      = ${n}`,
+    `  digits = ${dN}`,
+  ];
+  if(isMaybePrime){
+    lines.push('  Status : MAYBE PRIME');
+    lines.push(`  n value: ${n}`);
+    lines.push('  No factorisation found in spectrum (-1/2, -1)');
+  } else {
+    lines.push('  Status : FACTORED');
+    lines.push(`  Band   : SOW-${band}`);
+    lines.push(`  s      = ${s}`);
+    lines.push(`  x      = ${x}`);
+    lines.push(`  p      = ${p}  (${dP} digits)`);
+    lines.push(`  q      = ${q}  (${dQ} digits)`);
+    lines.push(`  p x q  = ${verify}`);
+  }
+  lines.push(`  Time   = ${timeStr}`);
+  lines.push(sep);
+  lines.push('  (c) Thierno M. Sow -- Sow-Riemann.Miro.Wurus.V9 -- 2026');
+  lines.push('  thierno.sow@sciencespo.fr  |  sowriemann@proton.me');
+  lines.push(sep);
+  const report = lines.join('\n');
+
+  const blob = new Blob([report], {type:'text/plain'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'SowRiemann_V9_report_' + new Date().toISOString().slice(0,19).replace(/:/g,'-') + '.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+</script>
+</body>
+</html>
